@@ -43,7 +43,8 @@ namespace _04_BotonesYPropiedades
             boton3.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Yellow);
 
             //Añadimos al stacpanel
-            stac.Children.Add(boton3);
+            sp_stac.Children.Add(boton3);
+            //Añadimos un evento al onclik del elemento
             boton3.Click += new RoutedEventHandler(Button3Click);
         }
 
