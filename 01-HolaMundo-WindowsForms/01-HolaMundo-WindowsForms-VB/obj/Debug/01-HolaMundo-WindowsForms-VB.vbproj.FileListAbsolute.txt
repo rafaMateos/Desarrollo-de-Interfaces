@@ -1,0 +1,16 @@
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsForms-VB.exe.config
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsForms-VB.exe
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsForms-VB.pdb
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsForms-VB.xml
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.vbprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\_01_HolaMundo_WindowsForms_VB.Form1.resources
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\_01_HolaMundo_WindowsForms_VB.Resources.resources
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.vbproj.GenerateResource.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.vbproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.exe
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.xml
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.pdb
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsFormsC.exe
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsFormsC.pdb
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\bin\Debug\01-HolaMundo-WindowsFormsC.exe.config
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsForms-VB\obj\Debug\01-HolaMundo-WindowsForms-VB.vbproj.CopyComplete

@@ -1,0 +1,10 @@
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\bin\Debug\01-HolaMundo-WindowsFormsC.exe.config
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\bin\Debug\01-HolaMundo-WindowsFormsC.exe
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\bin\Debug\01-HolaMundo-WindowsFormsC.pdb
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\01-HolaMundo-WindowsFormsC.csprojAssemblyReference.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\_01_HolaMundo_WindowsFormsC.Form1.resources
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\_01_HolaMundo_WindowsFormsC.Properties.Resources.resources
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\01-HolaMundo-WindowsFormsC.csproj.GenerateResource.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\01-HolaMundo-WindowsFormsC.csproj.CoreCompileInputs.cache
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\01-HolaMundo-WindowsFormsC.exe
+C:\Users\rmateos\Desktop\Github\01-HolaMundo-WindowsForms\01-HolaMundo-WindowsFormsC\obj\Debug\01-HolaMundo-WindowsFormsC.pdb
