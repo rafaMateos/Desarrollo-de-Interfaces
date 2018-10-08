@@ -31,7 +31,7 @@ namespace _04_BotonesYPropiedades
             Button boton3 = new Button();
 
             //Asignamos valores a sus propiedades
-            boton3.Content = "Boton1";
+            boton3.Content = "Boton3";
             boton3.VerticalAlignment = VerticalAlignment.Center;
             boton3.HorizontalAlignment = HorizontalAlignment.Center;
             boton3.Background = new SolidColorBrush(Windows.UI.Colors.Blue);
@@ -42,9 +42,32 @@ namespace _04_BotonesYPropiedades
             boton3.FontWeight = Windows.UI.Text.FontWeights.Bold;
             boton3.BorderBrush = new SolidColorBrush(Windows.UI.Colors.Yellow);
 
+            //Añadimos al stacpanel
+            stac.Children.Add(boton3);
+            boton3.Click += new RoutedEventHandler(Button3Click);
+        }
 
-            stac = new StackPanel();
-            boton3.Content = stac;
+        /// <summary>
+        /// Metodo click del boton creado por codigo, que nos mostrara un holamundo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private async void Button3Click(object sender, RoutedEventArgs e)
+        {
+
+            ContentDialog msg = new ContentDialog
+
+            {
+                //Le damos valores a los campos del content dialog
+                Title = "Hola Mundo",
+                Content = "Estamos en DI",
+                CloseButtonText = "Salir"
+
+            };
+            //Mostrar el mensaje
+            await msg.ShowAsync();
+
         }
     }
 }

@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>045112d7-df49-4c71-a0a9-e2bed8cc5674</PackageIdentityName>
     <PackageIdentityPublisher>CN=rmateos</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\04-BotonesYPropiedades.exe">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\04-BotonesYPropiedades.exe">
       <PackagePath>entrypoint\04-BotonesYPropiedades.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -370,53 +370,53 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\04-BotonesYPropiedades.xr.xml">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\04-BotonesYPropiedades.xr.xml">
       <PackagePath>04-BotonesYPropiedades.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\2Dam\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\Core\04-BotonesYPropiedades.exe">
+    <AppxPackagedFile Include="C:\Users\rmateos\Desktop\Github\Desarrollo-de-Interfaces\04-BotonesYPropiedades\04-BotonesYPropiedades\bin\x86\Debug\Core\04-BotonesYPropiedades.exe">
       <PackagePath>04-BotonesYPropiedades.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

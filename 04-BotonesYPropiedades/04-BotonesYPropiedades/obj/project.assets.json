@@ -27506,11 +27506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rmateos\\Desktop\\Github\\2Dam\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\04-BotonesYPropiedades.csproj",
+      "projectUniqueName": "C:\\Users\\rmateos\\Desktop\\Github\\Desarrollo-de-Interfaces\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\04-BotonesYPropiedades.csproj",
       "projectName": "04-BotonesYPropiedades",
-      "projectPath": "C:\\Users\\rmateos\\Desktop\\Github\\2Dam\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\04-BotonesYPropiedades.csproj",
+      "projectPath": "C:\\Users\\rmateos\\Desktop\\Github\\Desarrollo-de-Interfaces\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\04-BotonesYPropiedades.csproj",
       "packagesPath": "C:\\Users\\rmateos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rmateos\\Desktop\\Github\\2Dam\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\obj\\",
+      "outputPath": "C:\\Users\\rmateos\\Desktop\\Github\\Desarrollo-de-Interfaces\\04-BotonesYPropiedades\\04-BotonesYPropiedades\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
