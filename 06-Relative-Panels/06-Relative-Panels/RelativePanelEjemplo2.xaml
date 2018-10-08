@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="_06_Relative_Panels.RelativePanelEjemplo2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_06_Relative_Panels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <VariableSizedWrapGrid>
+    <RelativePanel Name="rp_Supreme" >
+        
+        <!--StacPanel botones-->
+        <StackPanel Name="sp_Supreme" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" >
+            
+            <AppBarButton Name="primero" Icon="Document"></AppBarButton>
+            <AppBarButton Icon="Account"></AppBarButton>
+            <AppBarButton Icon="Admin"></AppBarButton>
+            <AppBarButton Name="ultimo" Icon="Add"></AppBarButton>
+            
+        </StackPanel>
+
+        
+        <!--Listado de elementos-->
+        <ListView Name="lv_supreme" RelativePanel.Below= "sp_Supreme" RelativePanel.AlignLeftWith="sp_Supreme" RelativePanel.AlignRightWith="sp_Supreme">
+            
+            <x:String>Item 1</x:String>
+            <x:String>Item 2</x:String>
+            <x:String>Item 3</x:String>
+            <x:String>Item 4</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+            <x:String>Item 5</x:String>
+
+
+        </ListView>
+
+        <StackPanel RelativePanel.Below="lv_supreme" RelativePanel.AlignRightWithPanel="True"  >
+            <AppBarButton  Icon="NewFolder"></AppBarButton>
+            
+        </StackPanel>
+
+        <!--Flechas-->
+        <StackPanel  Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True">
+
+            <AppBarButton Icon="Back"></AppBarButton>
+            <AppBarButton Icon="Forward"></AppBarButton>
+            
+
+        </StackPanel>
+    </RelativePanel>
+    </VariableSizedWrapGrid>
+</Page>
