@@ -7,9 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <StackPanel Name="sp_stac">
-        <Button Content="Boton1" VerticalAlignment="Center" HorizontalAlignment="Center" Background="Blue" Height="70" Width="200" FontFamily="Verdana" FontSize="16" FontWeight="Bold" BorderBrush="Yellow" RenderTransformOrigin="0.479,4.972" Margin="0,0,0,0"/>
+ 
+    <Border>
+        <!--Borde padre-->
+        
+    
+    <StackPanel Name="sp_stac" BorderBrush="Blue" BorderThickness="10" CornerRadius="25"  Margin="0,0,0,10">
+        <Button Content="Boton1" Padding="40"  VerticalAlignment="Center" HorizontalAlignment="Center" Background="Blue" Height="auto" Width="auto" FontFamily="Verdana" FontSize="16" FontWeight="Bold" BorderBrush="Yellow" RenderTransformOrigin="0.479,4.972" Margin="40"/>
 
         <Button>
             <Button.Content>Boton2</Button.Content>
@@ -22,7 +26,11 @@
             <Button.FontSize>16</Button.FontSize>
             <Button.FontWeight>bold</Button.FontWeight>
             <Button.BorderBrush>yellow</Button.BorderBrush>
+           
+            
         </Button>
 
     </StackPanel>
+
+    </Border>
 </Page>

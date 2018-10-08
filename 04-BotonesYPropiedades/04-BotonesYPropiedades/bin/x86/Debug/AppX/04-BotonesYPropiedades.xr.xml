@@ -9,6 +9,10 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Name" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="CornerRadius" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -24,6 +28,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="_04_BotonesYPropiedades.MainPage" />
   </Roots.RootTypes>
