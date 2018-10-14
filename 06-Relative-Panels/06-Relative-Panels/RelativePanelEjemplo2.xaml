@@ -8,11 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <VariableSizedWrapGrid>
-    <RelativePanel Name="rp_Supreme" >
+   
+        
+    <RelativePanel>
         
         <!--StacPanel botones-->
-        <StackPanel Name="sp_Supreme" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True" >
+        <StackPanel Name="sp_Supreme"
+                    Orientation="Horizontal" 
+                    RelativePanel.AlignLeftWithPanel="True" 
+                    RelativePanel.AlignTopWithPanel="True" >
             
             <AppBarButton Name="primero" Icon="Document"></AppBarButton>
             <AppBarButton Icon="Account"></AppBarButton>
@@ -23,7 +27,11 @@
 
         
         <!--Listado de elementos-->
-        <ListView Name="lv_supreme" RelativePanel.Below= "sp_Supreme" RelativePanel.AlignLeftWith="sp_Supreme" RelativePanel.AlignRightWith="sp_Supreme">
+        <ListView Name="lv_supreme" 
+                  RelativePanel.Above="Flecha"
+                  RelativePanel.Below= "sp_Supreme" 
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignRightWith="sp_Supreme">
             
             <x:String>Item 1</x:String>
             <x:String>Item 2</x:String>
@@ -33,32 +41,27 @@
             <x:String>Item 5</x:String>
             <x:String>Item 5</x:String>
             <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
-            <x:String>Item 5</x:String>
+     
+          
 
 
         </ListView>
 
-        <StackPanel RelativePanel.Below="lv_supreme" RelativePanel.AlignRightWithPanel="True"  >
+        <StackPanel Name="boton" RelativePanel.Below="lv_supreme">
             <AppBarButton  Icon="NewFolder"></AppBarButton>
             
         </StackPanel>
 
+            
         <!--Flechas-->
-        <StackPanel  Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True">
+        <StackPanel Name="Flecha"  Orientation="Horizontal" RelativePanel.AlignBottomWithPanel="True">
 
             <AppBarButton Icon="Back"></AppBarButton>
             <AppBarButton Icon="Forward"></AppBarButton>
             
 
         </StackPanel>
-    </RelativePanel>
-    </VariableSizedWrapGrid>
+            
+        </RelativePanel>
+   
 </Page>
