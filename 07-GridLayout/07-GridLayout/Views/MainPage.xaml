@@ -15,7 +15,7 @@
             <AppBarButton Icon="Admin"></AppBarButton>
             <AppBarButton Icon="BrowsePhotos"></AppBarButton>
         </StackPanel>
-        
+
         <Grid Name="grdFormulario" 
               RelativePanel.Below="stkPanelBotones" 
               RelativePanel.AlignLeftWithPanel="True"
@@ -39,10 +39,10 @@
             <TextBox Name="txtApellidos" Grid.Row="1" Grid.Column="1" ></TextBox>
             <TextBox Name="txtEmail" Grid.Row="2" Grid.Column="1"  ></TextBox>
 
-            <TextBlock Name="txtErrorNombre" Foreground="DarkRed" Grid.Row="0" Grid.Column="2" Text="Introduce un nombre" Visibility="Collapsed"> </TextBlock>
-            <TextBlock Name="txtErrorApellidos" Foreground="DarkRed" Grid.Row="1" Grid.Column="2" Text="Nene el apellido" Visibility="Collapsed">  </TextBlock>
-            <TextBlock Name="txtErrorEmail" Foreground="DarkRed" Grid.Row="2" Grid.Column="2" Text="Introduce email valido" Visibility="Collapsed"> </TextBlock>
-            
+            <TextBlock Name="txtbErrorNombre" Foreground="DarkRed" Grid.Row="0" Grid.Column="2" Text="Introduce un nombre" Visibility="Collapsed"></TextBlock>
+            <TextBlock Name="txtbErrorApellidos" Foreground="DarkRed" Grid.Row="1" Grid.Column="2" Text="Nene el apellido" Visibility="Collapsed"></TextBlock>
+            <TextBlock Name="txtbErrorEmail" Foreground="DarkRed" Grid.Row="2" Grid.Column="2" Text="Introduce email valido" Visibility="Collapsed"></TextBlock>
+
         </Grid>
 
         <Button
@@ -50,7 +50,7 @@
             Content="Send"
             Click="btnSend_Click"
    
-            RelativePanel.Below="grdFormulario" HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+            RelativePanel.Below="grdFormulario" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,0,0" 
             />
 
 
@@ -61,6 +61,6 @@
 
 
     </RelativePanel>
-    
-    
+
+
 </Page>

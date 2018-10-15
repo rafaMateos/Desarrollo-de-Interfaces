@@ -37,29 +37,26 @@ namespace _07_GridLayout
 
 
             //Comprobamos si el nombre esta vacio
-            if (String.IsNullOrEmpty(txtNombre.Text))
-            {
+            if (String.IsNullOrEmpty(txtNombre.Text)) {
 
-                txtErrorNombre.Visibility = Visibility.Visible; 
+                txtbErrorNombre.Visibility = Visibility.Visible; 
 
             }
             else {
 
-                txtErrorNombre.Visibility = Visibility.Collapsed;
+                txtbErrorNombre.Visibility = Visibility.Collapsed;
             }
 
 
             //Comprobamos si el apellido esta vacio
-            if (String.IsNullOrEmpty(txtApellidos.Text))
-            {
+            if (String.IsNullOrEmpty(txtApellidos.Text)) {
 
-                txtErrorApellidos.Visibility = Visibility.Visible;
+                txtbErrorApellidos.Visibility = Visibility.Visible;
 
             }
-            else
-            {
+            else{
 
-                txtErrorApellidos.Visibility = Visibility.Collapsed;
+                txtbErrorApellidos.Visibility = Visibility.Collapsed;
             }
 
 
@@ -70,16 +67,14 @@ namespace _07_GridLayout
 
 
             //Comprobamos si el email esta vacio o es el email es incorrecto
-            if (String.IsNullOrEmpty(txtEmail.Text) || !emailCorrecto)
-            {
+            if (String.IsNullOrEmpty(txtEmail.Text) || !emailCorrecto){
 
-                txtErrorEmail.Visibility = Visibility.Visible;
+                txtbErrorEmail.Visibility = Visibility.Visible;
 
             }
-            else
-            {
+            else {
 
-                txtErrorEmail.Visibility = Visibility.Collapsed;
+                txtbErrorEmail.Visibility = Visibility.Collapsed;
             }
 
 
