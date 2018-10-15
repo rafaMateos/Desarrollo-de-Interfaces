@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="4d7c7457-8ab7-47ec-a3a0-7266e6f05451"
+    Name="03a34feb-b5e9-45f9-83eb-3a3105cfad3a"
     Publisher="CN=rmateos"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="4d7c7457-8ab7-47ec-a3a0-7266e6f05451" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="03a34feb-b5e9-45f9-83eb-3a3105cfad3a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>07-GridFormulario</DisplayName>
+    <DisplayName>08-FinalLayoutsRafa</DisplayName>
     <PublisherDisplayName>rmateos</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="_07_GridFormulario.App">
+      EntryPoint="_08_FinalLayoutsRafa.App">
       <uap:VisualElements
-        DisplayName="07-GridFormulario"
+        DisplayName="08-FinalLayoutsRafa"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="07-GridFormulario"
+        Description="08-FinalLayoutsRafa"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

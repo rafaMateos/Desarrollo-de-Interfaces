@@ -24,24 +24,29 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" VerticalAlignment="Center"></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="0" Text="LastName:" VerticalAlignment="Center"></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0" Text="Email:" VerticalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Fecha:" VerticalAlignment="Center"></TextBlock>
 
             <TextBox Name="txtNombre" Grid.Row="0" Grid.Column="1"></TextBox>
             <TextBox Name="txtApellidos" Grid.Row="1" Grid.Column="1" ></TextBox>
             <TextBox Name="txtEmail" Grid.Row="2" Grid.Column="1"  ></TextBox>
+            <TextBox Name="txtFecha"  Grid.Row="3" Grid.Column="1"  ></TextBox>
 
             <TextBlock Name="txtbErrorNombre" Foreground="DarkRed" Grid.Row="0" Grid.Column="2" Text="Introduce un nombre" Visibility="Collapsed"></TextBlock>
             <TextBlock Name="txtbErrorApellidos" Foreground="DarkRed" Grid.Row="1" Grid.Column="2" Text="Nene el apellido" Visibility="Collapsed"></TextBlock>
             <TextBlock Name="txtbErrorEmail" Foreground="DarkRed" Grid.Row="2" Grid.Column="2" Text="Introduce email valido" Visibility="Collapsed"></TextBlock>
+            <TextBlock Name="txtbErrorFecha" Foreground="DarkRed" Grid.Row="3" Grid.Column="2" Text="Introduce fecha valido" Visibility="Collapsed"></TextBlock>
 
         </Grid>
 

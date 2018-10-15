@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,34 +28,44 @@ namespace _07_GridLayout
             this.InitializeComponent();
         }
 
-
+        /// <summary>
+        /// Evento asociado al clik boton enviar.
+        /// Valida el formulario y muestra mensajes de error
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
 
-            //Inicialiazamos las variables que vayamos a necesitar
+            //Inicialiazamos y declaramos las variables que vayamos a necesitar
             String email = "";
             Boolean emailCorrecto = false;
-
+            String time = "";
+            //Dclara las variables String y guarda los textos de los txtbox nene.
 
             //Comprobamos si el nombre esta vacio
-            if (String.IsNullOrEmpty(txtNombre.Text)) {
+            if (String.IsNullOrEmpty(txtNombre.Text))
+            {
 
-                txtbErrorNombre.Visibility = Visibility.Visible; 
+                txtbErrorNombre.Visibility = Visibility.Visible;
 
             }
-            else {
+            else
+            {
 
                 txtbErrorNombre.Visibility = Visibility.Collapsed;
             }
 
 
             //Comprobamos si el apellido esta vacio
-            if (String.IsNullOrEmpty(txtApellidos.Text)) {
+            if (String.IsNullOrEmpty(txtApellidos.Text))
+            {
 
                 txtbErrorApellidos.Visibility = Visibility.Visible;
 
             }
-            else{
+            else
+            {
 
                 txtbErrorApellidos.Visibility = Visibility.Collapsed;
             }
@@ -62,12 +73,16 @@ namespace _07_GridLayout
 
             //Comprobamos si el email puede ser valido
             email = txtEmail.Text;
+            
+            //Instanciamos un objeto de la clase regex con nuestra expresion regular
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
 
-            emailCorrecto = email.Contains('@');
+            //La clase match tiene un metodo regex el cual nos comprobara si nuestro email es valido acorde la expresion regular
+            Match match = regex.Match(email);
 
-
-            //Comprobamos si el email esta vacio o es el email es incorrecto
-            if (String.IsNullOrEmpty(txtEmail.Text) || !emailCorrecto){
+            //Si el email es correcto
+            if (!match.Success)
+            {
 
                 txtbErrorEmail.Visibility = Visibility.Visible;
 
@@ -75,7 +90,26 @@ namespace _07_GridLayout
             else {
 
                 txtbErrorEmail.Visibility = Visibility.Collapsed;
+
             }
+
+
+            DateTime today;
+            if (DateTime.TryParse(txtFecha.Text, out today))
+            {
+
+                txtbErrorFecha.Visibility = Visibility.Visible;
+
+            }
+            else {
+
+                txtbErrorFecha.Visibility = Visibility.Collapsed;
+
+
+            }
+
+
+
 
 
         }
