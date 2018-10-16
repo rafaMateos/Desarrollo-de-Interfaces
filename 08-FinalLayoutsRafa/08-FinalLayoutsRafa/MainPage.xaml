@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <RelativePanel Margin="10">
+    <RelativePanel Margin="10" BorderBrush="Black" BorderThickness="3">
         
         <Border Name="bSupreme" BorderBrush="Black"
                 BorderThickness="3" 
@@ -21,7 +21,7 @@
             
         </Border>
 
-        <Border BorderBrush="Black"
+        <Border Name="SegundoBord" BorderBrush="Black"
                 BorderThickness="3" 
                 RelativePanel.AlignLeftWithPanel="True" 
                 RelativePanel.AlignRightWithPanel="True"
@@ -31,8 +31,100 @@
                 Text="Lorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenen">
 
             </TextBlock>
-            
-            
+
+        </Border>
+
+        <Border Name="borderGrande" RelativePanel.Below="SegundoBord"
+                RelativePanel.AlignLeftWithPanel="True" 
+                RelativePanel.AlignRightWithPanel="True"
+                BorderBrush="Black"
+                BorderThickness="3"
+                RelativePanel.Above="borderFinal"
+                 Margin="10">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+           
+
+            <VariableSizedWrapGrid Orientation="Horizontal" Name="grande">
+                    <Rectangle 
+                Width="100" 
+                Height="100" 
+                Fill="Yellow"
+                   Margin="10">
+                    </Rectangle>
+                    <Rectangle 
+                Width="100" 
+                Height="100" 
+                Fill="Orange">
+                </Rectangle>
+                <Rectangle 
+                Width="100" 
+                Height="100" 
+                Fill="red">
+                </Rectangle>
+                <Rectangle 
+                Width="100" 
+                Height="100" 
+                Fill="Black">
+                </Rectangle>
+
+            </VariableSizedWrapGrid>
+                <RelativePanel Grid.Column="1" Margin="15">
+                <Border Name="primer"
+                    Grid.Column="1"
+                   RelativePanel.AlignRightWithPanel="True" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    BorderBrush="Black" 
+                    BorderThickness="3"
+                        Margin="10">
+                        <TextBlock TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
+                            
+                        </TextBlock>
+
+                </Border>
+                    <Border Name="Segun"
+                    Grid.Column="1"
+                            RelativePanel.Below="primer"
+                   RelativePanel.AlignRightWithPanel="True" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    BorderBrush="Black" 
+                    BorderThickness="3"
+                            Margin="10">
+                        <TextBlock TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
+
+                        </TextBlock>
+
+                    </Border>
+                </RelativePanel>
+
+            </Grid>
+
+        </Border>
+        
+
+        <Border Name="borderFinal" 
+                RelativePanel.AlignBottomWithPanel="True"
+                BorderBrush="Black"
+                BorderThickness="3"
+                RelativePanel.AlignLeftWithPanel="True"
+                Margin="10"
+                >
+
+            <TextBlock TextWrapping="Wrap"
+                Text="Lorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenenLorem ipsum nene que flama soy nenenenenenenenen">
+
+            </TextBlock>
+
 
         </Border>
         
