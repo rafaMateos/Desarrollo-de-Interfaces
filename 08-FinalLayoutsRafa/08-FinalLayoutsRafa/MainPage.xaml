@@ -53,8 +53,8 @@
                 </Grid.ColumnDefinitions>
 
 
-           
 
+                <ScrollViewer VerticalScrollBarVisibility="Visible">
             <VariableSizedWrapGrid Orientation="Horizontal" Name="grande">
                     <Rectangle 
                 Width="100" 
@@ -79,6 +79,7 @@
                 </Rectangle>
 
             </VariableSizedWrapGrid>
+                </ScrollViewer>
                 <RelativePanel Grid.Column="1" Margin="15">
                 <Border Name="primer"
                     Grid.Column="1"
