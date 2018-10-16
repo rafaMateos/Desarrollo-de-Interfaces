@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="_09_LengendaryLayoutChallenge.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_09_LengendaryLayoutChallenge"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+
+
+    <VariableSizedWrapGrid>
+
+        <RelativePanel Name=" pepito">
+
+            <TextBlock Name="TxtBTitle"
+                           RelativePanel.AlignLeftWithPanel="True"
+                           RelativePanel.AlignRightWithPanel="True"
+                Text="Lorem Ipsum" 
+                TextWrapping="Wrap" 
+                FontSize="48" 
+                Margin="15" 
+                FontWeight="Bold">
+                </TextBlock>
+
+
+            <Grid Name="tabla" RelativePanel.Below="TxtBTitle">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+
+                <TextBlock Grid.Column="0" Name="PrimerLorep"
+            RelativePanel.Below="TxtBTitle"
+            Text="Lorem impusn esto no sale porque no sale nene dame una explicacionLoremLorem impusn esto no sale porque no sale nene dame una explicacionLoremLorem impusn esto no sale porque no sale nene dame una explicacionLorem impusn esto no sale porque no sale nene dame una explicacion"
+            Margin="10"
+            TextWrapping="Wrap">
+                </TextBlock>
+
+                <TextBlock Name="Lorep" 
+            RelativePanel.Below="PrimerLorep"
+                   Grid.Column="1"
+            Text="Lorem impusn esto no saleLorem impusn esto no sale porque no sale nene dame una explicacionLoremLorem impusn esto no sale porque no sale nene dame una explicacionLorem porque no sale nene dame una explicacionLorem impusn esto no sale porque no sale nene dame una explicacion"
+            Margin="10"
+            TextWrapping="Wrap">
+                </TextBlock>
+
+
+                <TextBlock Name="Lorep2" 
+            RelativePanel.Below="PrimerLorep"
+                   Grid.Column="2"
+            Text="Lorem impusn esto no saleLorem impusn esto no sale porque no sale nene dame una explicacionLoremLorem impusn esto no sale porque no sale nene dame una explicacionLorem porque no sale nene dame una explicacionLorem impusn esto no sale porque no sale nene dame una explicacion"
+            Margin="10"
+            TextWrapping="Wrap">
+                </TextBlock>
+
+
+            </Grid>
+
+        </RelativePanel>
+
+     
+    </VariableSizedWrapGrid>
+
+</Page>
