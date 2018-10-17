@@ -72,28 +72,28 @@
                 Height="100" 
                 Fill="red">
                 </Rectangle>
-                <Rectangle 
-                Width="100" 
-                Height="100" 
-                Fill="Black">
-                </Rectangle>
-
+              
+                    
             </VariableSizedWrapGrid>
+                    
                 </ScrollViewer>
-                <RelativePanel Grid.Column="1" Margin="15">
-                <Border Name="primer"
+
+                
+                    <RelativePanel Grid.Column="1" Margin="15">
+                       
+                        <Border Name="primer"
                     Grid.Column="1"
                    RelativePanel.AlignRightWithPanel="True" 
                     RelativePanel.AlignLeftWithPanel="True"
                     BorderBrush="Black" 
                     BorderThickness="3"
                         Margin="10">
-                        <TextBlock TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
-                            
-                        </TextBlock>
+                        <TextBlock ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.IsVerticalRailEnabled="True" TextWrapping="Wrap" Text="loremipsum nene que crack que ereslore crack que eresloremipsum nene que crack que erenene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que erenene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que erenene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que ere eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
 
-                </Border>
-                    <Border Name="Segun"
+                            </TextBlock>
+
+                        </Border>
+                        <Border Name="Segun"
                     Grid.Column="1"
                             RelativePanel.Below="primer"
                    RelativePanel.AlignRightWithPanel="True" 
@@ -101,12 +101,28 @@
                     BorderBrush="Black" 
                     BorderThickness="3"
                             Margin="10">
-                        <TextBlock TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
+                            <TextBlock TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
 
-                        </TextBlock>
+                            </TextBlock>
 
-                    </Border>
-                </RelativePanel>
+                        </Border>
+
+                        <Border Name="Tercer"
+                    Grid.Column="1"
+                            RelativePanel.Below="Segun"
+                   RelativePanel.AlignRightWithPanel="True" 
+                    RelativePanel.AlignLeftWithPanel="True"
+                    BorderBrush="Black" 
+                    BorderThickness="3"
+                            Margin="10">
+                            <TextBlock  TextWrapping="Wrap" Text="loremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eresloremipsum nene que crack que eres">
+
+                            </TextBlock>
+
+                        </Border>
+                    </RelativePanel>
+
+                
 
             </Grid>
 
