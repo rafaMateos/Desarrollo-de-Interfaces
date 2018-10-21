@@ -76,7 +76,7 @@
 
             </RadioButton>
 
-        <RadioButton 
+            <RadioButton 
             Foreground="Red"
             Grid.Column="2"
             Grid.Row="0"
@@ -106,7 +106,7 @@
             HorizontalAlignment="Center"
             >
         </Button>
-        
+
         <!--Quinto elemento-->
         <Pivot Grid.Column="0" Grid.Row="1">
             <PivotItem>
@@ -130,7 +130,7 @@
             </PivotItem>
         </Pivot>
 
-        
+
         <!--Sexto elemento-->
 
         <Grid
@@ -142,20 +142,142 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <TextBlock>
-                
+            <TextBlock
+                Text= "Texbox que admite intros y marca palabras mal escritas"
+                TextDecorations="Underline"
+                Foreground="DarkRed"
+                VerticalAlignment="Center">
+
             </TextBlock>
 
-            <TextBox 
-                Grid.Row="1"
-                Width="200"
-                Height="50">
-                
-                
-            </TextBox>
 
+            <ScrollViewer Grid.Row="1">
+                <StackPanel >
+                    <TextBox 
+                
+                Width="200"
+                Height="68"
+                AcceptsReturn="True" 
+                >
+
+                    </TextBox>
+                </StackPanel>
+            </ScrollViewer>
 
         </Grid>
 
-    </Grid>
+        <!--Septimo elemento-->
+        <PasswordBox Grid.Row="1"
+                 Grid.Column="2"
+                Width="200"
+                Height="68" 
+                 >
+
+        </PasswordBox>
+
+        
+        <!--Octavo elemento-->
+        <ListBox Grid.Row="1"
+                 Grid.Column="3"
+                 >
+            
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande"
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+            <TextBlock 
+                Text="grande" 
+                />
+
+        </ListBox>
+
+        <!--noveno elemento-->
+        <ComboBox 
+            Grid.Row="2">
+            <ComboBoxItem>
+                Hola
+            </ComboBoxItem>
+            
+            <ComboBoxItem>
+                Hola
+            </ComboBoxItem>
+            
+            <ComboBoxItem>
+                Hola
+            </ComboBoxItem>
+            
+        </ComboBox>
+        
+        <!--decimo elemento-->
+        <Grid
+            Grid.Column="1" 
+            Grid.Row="2"
+            Grid.ColumnSpan="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Slider ValueChanged="Slider_ValueChanged">
+
+            </Slider>
+
+            <ProgressBar Name="p" Grid.Row="1">
+                
+            </ProgressBar>
+            
+        </Grid>
+
+        <!--Decimo primer-->
+        <CalendarView Grid.Row="3">
+            
+            
+        </CalendarView>
+
+        <!--decimosegundo segundo--> 
+        <CalendarDatePicker Grid.Row="3"
+                            Grid.Column="1">
+            
+        </CalendarDatePicker>
+
+        <!--Decimo tercer-->
+        <DatePicker  Grid.Row="3"
+                     Grid.Column="2">
+            
+        </DatePicker>
+        
+        <!--decimo cuarto-->
+        
+        <Button Grid.Row="3"
+                Grid.Column="3"
+                Width="auto"
+                Height="auto"
+                Content="Aqui va a aotra pagina nene"
+                HorizontalAlignment="Center" Click="Button_Click">
+            
+        </Button>
+
+
+        </Grid>
 </Page>

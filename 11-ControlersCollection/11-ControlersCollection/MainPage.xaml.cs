@@ -22,14 +22,39 @@ namespace _11_ControlersCollection
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
+
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
 
+        /// <summary>
+        /// Metodo el cual nos cambia el valor de la barra de progreso segun el slider
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            Slider slider = sender as Slider;
+            if (slider != null)
+            {
+                p.Value = slider.Value;
+            }
+
+        }
+
+
+
+        /// <summary>
+        /// Evento click para cambiar de pagina
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BlankPage1));
         }
     }
 }
