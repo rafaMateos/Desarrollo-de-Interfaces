@@ -17,12 +17,7 @@ using Windows.Devices.Geolocation;
 using Windows.Services.Maps;
 using Windows.UI.Xaml.Controls.Maps;
 using Windows.UI;
-using System;
-using Windows.Devices.Geolocation;
-using Windows.Services.Maps;
-using Windows.UI;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Maps;
+
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -51,9 +46,8 @@ namespace _11_ControlersCollection
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             color = myColorPicker.Color;
-            rec.Fill = new SolidColorBrush(color);
-           
 
+            rec.Fill = new SolidColorBrush(color);
 
         }
 

@@ -104,6 +104,7 @@
             Height="auto"
             Content="Tooltip"
             HorizontalAlignment="Center"
+            
             >
         </Button>
 
@@ -143,7 +144,7 @@
             </Grid.RowDefinitions>
 
             <TextBlock
-                Text= "Texbox que admite intros y marca palabras mal escritas"
+                Text= "Texbox que admite intros y marca palabras malamente:D"
                 TextDecorations="Underline"
                 Foreground="DarkRed"
                 VerticalAlignment="Center">
@@ -158,6 +159,9 @@
                 Width="200"
                 Height="68"
                 AcceptsReturn="True" 
+                TextWrapping="Wrap"
+                Language="ES-es"
+                IsSpellCheckEnabled="True"
                 >
 
                     </TextBox>
@@ -239,25 +243,30 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Slider ValueChanged="Slider_ValueChanged">
+            <Slider 
+                ValueChanged="Slider_ValueChanged"
+                Name="pro">
 
             </Slider>
 
-            <ProgressBar Name="p" Grid.Row="1">
+            <ProgressBar 
+                Name="p" 
+                Grid.Row="1"
+                Value="{Binding ElementName=pro, Path=Value, Mode=OneWay}">
                 
             </ProgressBar>
             
         </Grid>
 
         <!--Decimo primer-->
-        <CalendarView Grid.Row="3">
-            
-            
+        <CalendarView 
+            Grid.Row="3">
         </CalendarView>
 
         <!--decimosegundo segundo--> 
-        <CalendarDatePicker Grid.Row="3"
-                            Grid.Column="1">
+        <CalendarDatePicker 
+            Grid.Row="3"
+            Grid.Column="1">
             
         </CalendarDatePicker>
 
