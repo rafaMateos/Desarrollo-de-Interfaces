@@ -57,8 +57,28 @@
                          BorderThickness="0"
                         />
                 </StackPanel>
+            </Border
+                    >
+
+            <Border
+                BorderThickness="1.5"
+                    BorderBrush="Black"
+                    CornerRadius="10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="50"
+                    >
+                <Button
+                    Content="Login"
+                    Background="White"
+                    FontFamily="Arial"
+                    HorizontalAlignment="Center"
+                    Height="40"
+                    >
+
+                </Button>
             </Border>
-           
+
         </StackPanel>
 
         </Grid>
