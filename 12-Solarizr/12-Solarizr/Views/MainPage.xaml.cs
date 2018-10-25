@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _12_Solarizr.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,11 @@ namespace _12_Solarizr
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Citas));
         }
     }
 }

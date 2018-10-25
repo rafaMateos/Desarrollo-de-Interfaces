@@ -12,7 +12,7 @@
         <!--Elemento padre-->
         <Grid>
             
-        <!--Image de fondo-->
+        <!--Imagen de fondo-->
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/fondo.jpg">
             </ImageBrush>
@@ -31,15 +31,14 @@
                 Grid.Row="0"
                 FontSize="100"
                 FontFamily="Arial"
-                Foreground="Orange"
-                
+                Foreground="Orange" 
             >
         </TextBlock>
 
             
         <!--Botone y user--><!-- y segun dylan login-->
         <StackPanel Grid.Row="1" Orientation="Vertical">
-            <Border BorderThickness="1.5"
+            <Border BorderThickness="0.5"
                     BorderBrush="Black"
                     CornerRadius="10"
                     VerticalAlignment="Center"
@@ -56,12 +55,21 @@
                      PlaceholderText="Password..."
                          BorderThickness="0"
                         />
+
+                    
                 </StackPanel>
-            </Border
-                    >
+            </Border>
+
+
+            <TextBlock Foreground="#A3A6A8"
+                Margin="400,0,0,0"
+                HorizontalAlignment="Center"
+                Text="Can't sign in?">
+                
+            </TextBlock>
 
             <Border
-                BorderThickness="1.5"
+                BorderThickness="0.5"
                     BorderBrush="Black"
                     CornerRadius="10"
                     VerticalAlignment="Center"
@@ -73,7 +81,7 @@
                     Background="White"
                     FontFamily="Arial"
                     HorizontalAlignment="Center"
-                    Height="40"
+                    Height="40" Click="Button_Click"
                     >
 
                 </Button>
