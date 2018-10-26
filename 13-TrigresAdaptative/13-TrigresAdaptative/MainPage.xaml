@@ -1,0 +1,141 @@
+﻿<Page
+    x:Class="_13_TrigresAdaptative.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_13_TrigresAdaptative"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <RelativePanel>
+
+        <!--Menu superior-->
+        <StackPanel 
+            Name="Menu_superior"
+            Orientation="Vertical"
+            Padding="20"
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            Background="AliceBlue"
+            >
+
+            <SymbolIcon
+                Symbol="Add"
+                Margin="20">
+            </SymbolIcon>
+
+            <SymbolIcon
+                Symbol="Accept"
+                Margin="20">
+            </SymbolIcon>
+
+            <SymbolIcon
+                Symbol="Admin"
+                Margin="20">
+            </SymbolIcon>
+
+            <SymbolIcon
+                Symbol="Calendar"
+                Margin="20">
+            </SymbolIcon>
+        </StackPanel>
+
+        <!--Tabla para las imagenes 3x3-->
+        <Grid Height="auto"
+              RelativePanel.AlignTopWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True"
+             RelativePanel.RightOf="Menu_superior"
+               >
+
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image 
+                Grid.Column="0"
+                Grid.Row="0"
+                Source="/Assets/tejao.jpg"
+               >
+                
+            </Image>
+
+            <Image 
+                Grid.Column="1"
+                Grid.Row="0"
+                Source="/Assets/tejao.jpg"
+               >
+
+            </Image>
+
+            <Image 
+                Grid.Column="2"
+                Grid.Row="0"
+                Source="/Assets/tejao.jpg"
+                >
+            </Image>
+
+            <Image 
+                Grid.Column="0"
+                Grid.Row="1"
+                Source="/Assets/tejao.jpg"
+                >
+
+            </Image>
+
+            <Image 
+                Grid.Column="1"
+                Grid.Row="1"
+                Source="/Assets/tejao.jpg"
+                >
+
+            </Image>
+
+            <Image 
+                Grid.Column="2"
+                Grid.Row="1"
+                Source="/Assets/tejao.jpg"
+               >
+
+            </Image>
+
+            <Image 
+                Grid.Column="0"
+                Grid.Row="2"
+                Source="/Assets/tejao.jpg"
+               >
+
+            </Image>
+
+            <Image 
+                Grid.Column="1"
+                Grid.Row="2"
+                Source="/Assets/tejao.jpg"
+                >
+
+            </Image>
+
+            <Image 
+                Grid.Column="2"
+                Grid.Row="2"
+                Source="/Assets/tejao.jpg"
+                >
+
+            </Image>
+
+
+        </Grid>
+        
+        
+    </RelativePanel>
+</Page>
