@@ -6,153 +6,148 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1223" Width="2233">
 
 
-    <RelativePanel Name="rltvp_Padre">
+    <Grid Name="Principal">
+
+        <VisualStateManager.VisualStateGroups>
+
+            <VisualStateGroup>
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="550"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--Posición de la barra de AppBarButtons-->
+                        <Setter Target="botones.(Grid.Row)" Value="0"/>
+                        <Setter Target="botones.(Grid.Column)" Value="0"/>
+                        <Setter Target="botones.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="botones.(StackPanel.Orientation)" Value="Vertical"/>
+                        <!--Posición del grid galería y de cada imagen dentro de él-->
+                        <Setter Target="scrollGaleria.(Grid.Column)" Value="1"/>
+                        <Setter Target="scrollGaleria.(Grid.RowSpan)" Value="2"/>
+                        <Setter Target="img1.(Grid.Row)" Value="0"/>
+                        <Setter Target="img1.(Grid.Column)" Value="0"/>
+                        <Setter Target="img2.(Grid.Row)" Value="0"/>
+                        <Setter Target="img2.(Grid.Column)" Value="1"/>
+                        <Setter Target="img3.(Grid.Row)" Value="0"/>
+                        <Setter Target="img3.(Grid.Column)" Value="2"/>
+                        <Setter Target="img4.(Grid.Row)" Value="1"/>
+                        <Setter Target="img4.(Grid.Column)" Value="0"/>
+                        <Setter Target="img5.(Grid.Row)" Value="1"/>
+                        <Setter Target="img5.(Grid.Column)" Value="1"/>
+                        <Setter Target="img6.(Grid.Row)" Value="1"/>
+                        <Setter Target="img6.(Grid.Column)" Value="2"/>
+                        <Setter Target="img7.(Grid.Row)" Value="2"/>
+                        <Setter Target="img7.(Grid.Column)" Value="0"/>
+                        <Setter Target="img8.(Grid.Row)" Value="2"/>
+                        <Setter Target="img8.(Grid.Column)" Value="1"/>
+                        <Setter Target="img9.(Grid.Row)" Value="2"/>
+                        <Setter Target="img9.(Grid.Column)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+                
+                
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <!--Posición de la barra de AppBarButtons-->
+                        <Setter Target="botones.(Grid.Row)" Value="0"/>
+                        <Setter Target="botones.(Grid.Column)" Value="0"/>
+                        <Setter Target="botones.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="botones.(StackPanel.Orientation)" Value="Horizontal"/>
+                        <!--Posición del grid galería y de cada imagen dentro de él-->
+                        <Setter Target="scrollGaleria.(Grid.Row)" Value="1"/>
+                        <Setter Target="scrollGaleria.(Grid.Column)" Value="0"/>
+                        <Setter Target="scrollGaleria.(Grid.ColumnSpan)" Value="2"/>
+                        <Setter Target="img1.(Grid.Row)" Value="0"/>
+                        <Setter Target="img1.(Grid.Column)" Value="0"/>
+                        <Setter Target="img2.(Grid.Row)" Value="1"/>
+                        <Setter Target="img2.(Grid.Column)" Value="0"/>
+                        <Setter Target="img3.(Grid.Row)" Value="2"/>
+                        <Setter Target="img3.(Grid.Column)" Value="0"/>
+                        <Setter Target="img4.(Grid.Row)" Value="3"/>
+                        <Setter Target="img4.(Grid.Column)" Value="0"/>
+                        <Setter Target="img5.(Grid.Row)" Value="4"/>
+                        <Setter Target="img5.(Grid.Column)" Value="0"/>
+                        <Setter Target="img6.(Grid.Row)" Value="5"/>
+                        <Setter Target="img6.(Grid.Column)" Value="0"/>
+                        <Setter Target="img7.(Grid.Row)" Value="6"/>
+                        <Setter Target="img7.(Grid.Column)" Value="0"/>
+                        <Setter Target="img8.(Grid.Row)" Value="7"/>
+                        <Setter Target="img8.(Grid.Column)" Value="0"/>
+                        <Setter Target="img9.(Grid.Row)" Value="8"/>
+                        <Setter Target="img9.(Grid.Column)" Value="0"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         
 
-        <!--Menu superior-->
-        <StackPanel 
-            Name="Menu_superior"
-            Orientation="Horizontal"
-            Padding="20"
-            RelativePanel.AlignTopWithPanel="True"
-            RelativePanel.AlignLeftWithPanel="True" 
-            Background="AliceBlue">
-            
-            
-              <!--<StackPanel 
-            Name="Menu_superior"
-            Orientation="Horizontal"
-            Padding="20"
-            RelativePanel.AlignTopWithPanel="True"
-            RelativePanel.AlignLeftWithPanel="True"
-            RelativePanel.AlignBottomWithPanel="True"
-            Background="AliceBlue">-->
-           
+        <!--Definición del grid Principal-->
+       <Grid.RowDefinitions>
+            <RowDefinition Height=""></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-            <SymbolIcon
-                Symbol="Add"
-                Margin="20">
-            </SymbolIcon>
 
-            <SymbolIcon
-                Symbol="Accept"
-                Margin="20">
-            </SymbolIcon>
 
-            <SymbolIcon
-                Symbol="Admin"
-                Margin="20">
-            </SymbolIcon>
-
-            <SymbolIcon
-                Symbol="Calendar"
-                Margin="20">
-            </SymbolIcon>
+        <!--AppBarButtons-->
+        <StackPanel Name="botones" Background="LightBlue">
+            <AppBarButton Icon="Add" Label="Añadir"/>
+            <AppBarButton Icon="Go" Label="Ir"/>
+            <AppBarButton Icon="Target" Label="Objetivo"/>
+            <AppBarButton Icon="AddFriend" Label="Añadir"/>
         </StackPanel>
 
-        <!--Tabla para las imagenes 3x3-->
-        <Grid Height="auto"
-              RelativePanel.AlignTopWithPanel="True"
-              RelativePanel.AlignBottomWithPanel="True"
-             RelativePanel.RightOf="Menu_superior"
-               >
 
-          
+        <!--Grid con las imágenes-->
+        <ScrollViewer Name="scrollGaleria" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Height="auto">
+            <Grid Name="Galeria">
 
+                <!--Definición del grid Galería-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
 
-            <Grid.RowDefinitions>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
-            </Grid.RowDefinitions>
+                <!--Imágenes de la galería-->
+                <Image Name="img1" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img2" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img3" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img4" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img5" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img6" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img7" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img8" Source="Assets/tejao.jpg" ></Image>
+                <Image Name="img9" Source="Assets/tejao.jpg" ></Image>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-
-            
-                <Image Name="Gatito"
-                Grid.Column="0"
-                Grid.Row="0"
-                Source="/Assets/StoreLogo.png"
-               >
-                </Image>
-           
-
-            <Image 
-                Grid.Column="1"
-                Grid.Row="0"
-                Source="/Assets/tejao.jpg"
-               >
-
-            </Image>
-
-            <Image 
-                Grid.Column="2"
-                Grid.Row="0"
-                Source="/Assets/tejao.jpg"
-                >
-            </Image>
-
-            <Image 
-                Grid.Column="0"
-                Grid.Row="1"
-                Source="/Assets/tejao.jpg"
-                >
-
-            </Image>
-
-            <Image 
-                Grid.Column="1"
-                Grid.Row="1"
-                Source="/Assets/tejao.jpg"
-                >
-
-            </Image>
-
-            <Image 
-                Grid.Column="2"
-                Grid.Row="1"
-                Source="/Assets/tejao.jpg"
-               >
-
-            </Image>
-
-            <Image 
-                Grid.Column="0"
-                Grid.Row="2"
-                Source="/Assets/tejao.jpg"
-               >
-
-            </Image>
-
-            <Image 
-                Grid.Column="1"
-                Grid.Row="2"
-                Source="/Assets/tejao.jpg"
-                >
-
-            </Image>
-
-            <Image 
-                Grid.Column="2"
-                Grid.Row="2"
-                Source="/Assets/tejao.jpg"
-                >
-
-            </Image>
+            </Grid>
+        </ScrollViewer>
 
 
-        </Grid>
-        
-        
-    </RelativePanel>
+    </Grid>
 
-    
-    
+
+
 </Page>
