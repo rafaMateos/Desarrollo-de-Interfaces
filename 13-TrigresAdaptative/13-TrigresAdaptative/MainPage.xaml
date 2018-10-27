@@ -9,18 +9,28 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-    <RelativePanel>
+    <RelativePanel Name="rltvp_Padre">
+        
 
         <!--Menu superior-->
         <StackPanel 
             Name="Menu_superior"
-            Orientation="Vertical"
+            Orientation="Horizontal"
+            Padding="20"
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True" 
+            Background="AliceBlue">
+            
+            
+              <!--<StackPanel 
+            Name="Menu_superior"
+            Orientation="Horizontal"
             Padding="20"
             RelativePanel.AlignTopWithPanel="True"
             RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.AlignBottomWithPanel="True"
-            Background="AliceBlue"
-            >
+            Background="AliceBlue">-->
+           
 
             <SymbolIcon
                 Symbol="Add"
@@ -50,6 +60,9 @@
              RelativePanel.RightOf="Menu_superior"
                >
 
+          
+
+
             <Grid.RowDefinitions>
                 <RowDefinition ></RowDefinition>
                 <RowDefinition ></RowDefinition>
@@ -62,13 +75,14 @@
                 <ColumnDefinition ></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image 
+            
+                <Image Name="Gatito"
                 Grid.Column="0"
                 Grid.Row="0"
-                Source="/Assets/tejao.jpg"
+                Source="/Assets/StoreLogo.png"
                >
-                
-            </Image>
+                </Image>
+           
 
             <Image 
                 Grid.Column="1"
@@ -138,4 +152,7 @@
         
         
     </RelativePanel>
+
+    
+    
 </Page>
