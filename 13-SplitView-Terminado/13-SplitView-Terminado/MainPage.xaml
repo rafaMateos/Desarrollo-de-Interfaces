@@ -8,7 +8,107 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel 
+        Background="AliceBlue">
 
-    </Grid>
+        <StackPanel Name="Hamburguer"
+            RelativePanel.AlignTopWithPanel="True" >
+
+            <AppBarButton
+            Name="hamburgerButton"
+            FontFamily="Segoe MDL2 Assets" 
+            Content="&#xE700;" 
+            Background="White"
+            Click="hamburgerButton_Click"
+            Height="52" 
+            Width="52"
+             />
+        </StackPanel>
+
+        <StackPanel RelativePanel.AlignRightWithPanel="True" 
+                    Orientation="Horizontal"
+                    >
+
+            <TextBox SelectedText="Buscar en la pagina"></TextBox>
+            <FontIcon Glyph="&#xE773;" Height="48" Width="48"/>
+
+
+        </StackPanel>
+
+
+        <SplitView
+            RelativePanel.Below="Hamburguer"
+            RelativePanel.AlignBottomWithPanel="True"
+            Name="splitView" 
+            DisplayMode="CompactInline"
+            CompactPaneLength="52"
+            IsPaneOpen="False"
+            >
+
+            <SplitView.Pane>
+                <ListView  
+                        SelectionChanged="ListView_SelectionChanged">
+                    <ListView.Items>
+                        <ListViewItem Name="uuuu" Padding="0,0,0,0"
+                                          >
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xE80F;" Height="48" Width="48"/>
+                                <TextBlock Margin="10,0,0,0" Text="Inicio" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListViewItem>
+
+                        <ListViewItem Name="Fechas" Padding="0,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xE8BF;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                                <TextBlock Margin="10,0,0,0" Text="Calendario" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListViewItem>
+
+                        <ListViewItem Name="Correo" Padding="0,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <FontIcon Glyph="&#xE715;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                                <TextBlock Margin="10,0,0,0" Text="Correo" VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListViewItem>
+
+                    </ListView.Items>
+                </ListView>
+
+            </SplitView.Pane>
+
+            <StackPanel Background="AliceBlue" Orientation="Vertical" VerticalAlignment="Bottom">
+
+
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon Tapped="FontIcon_Tapped" Glyph="&#xE715;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                    <TextBlock Margin="10,0,0,0" Text="Comentarios" VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon Glyph="&#xED15;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                    <TextBlock Margin="10,0,0,0" Text="Redes Sociales" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+
+
+
+
+
+        </SplitView>
+
+        <StackPanel 
+            RelativePanel.RightOf="splitView" 
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith ="splitView"
+            RelativePanel.AlignRightWithPanel="True">
+            <Frame 
+            HorizontalAlignment="Center"
+            Name="Contenedor">
+
+            </Frame>
+        </StackPanel>
+
+
+
+    </RelativePanel>
 </Page>

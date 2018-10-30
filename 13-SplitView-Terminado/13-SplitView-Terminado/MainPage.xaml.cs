@@ -26,5 +26,43 @@ namespace _13_SplitView_Terminado
         {
             this.InitializeComponent();
         }
+
+        private void hamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.splitView.IsPaneOpen = !this.splitView.IsPaneOpen;
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Correo.IsSelected)
+            {
+                Contenedor.Navigate(typeof(Calendario));
+            }
+            if (Fechas.IsSelected)
+            {
+
+                Contenedor.Navigate(typeof(pag1));
+            }
+            if (uuuu.IsSelected)
+            {
+
+                Contenedor.Navigate(typeof(pag2));
+
+            }
+
+
+
+        }
+
+        private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Contenedor.Navigate(typeof(formulario));
+
+        }
+
+        private void splitView_PaneOpening(SplitView sender, object args)
+        {
+
+        }
     }
 }
