@@ -24,20 +24,32 @@
              />
         </StackPanel>
 
+        <StackPanel RelativePanel.AlignRightWithPanel="True" 
+                    Orientation="Horizontal"
+                    >
+
+            <TextBox SelectedText="Buscar en la pagina"></TextBox>
+            <FontIcon Glyph="&#xE773;" Height="48" Width="48"/>
+          
+
+        </StackPanel>
+
         
         <SplitView
             RelativePanel.Below="Hamburguer"
             RelativePanel.AlignBottomWithPanel="True"
             Name="splitView" 
-            DisplayMode="CompactOverlay"
+            DisplayMode="CompactInline"
             CompactPaneLength="52"
-          >
+            IsPaneOpen="False"
+            >
 
                 <SplitView.Pane>
-                    <ListView 
+                    <ListView  
                         SelectionChanged="ListView_SelectionChanged">
                         <ListView.Items>
-                            <ListViewItem Name="uuuu" Padding="0,0,0,0">
+                            <ListViewItem Name="uuuu" Padding="0,0,0,0"
+                                          >
                                 <StackPanel Orientation="Horizontal">
                                     <FontIcon Glyph="&#xE80F;" Height="48" Width="48"/>
                                     <TextBlock Margin="10,0,0,0" Text="Inicio" VerticalAlignment="Center"/>
@@ -60,16 +72,42 @@
 
                         </ListView.Items>
                     </ListView>
+                
                 </SplitView.Pane>
-            </SplitView>
+            
+            <StackPanel Background="AliceBlue" Orientation="Vertical" VerticalAlignment="Bottom">
 
-        <Frame 
-                RelativePanel.RightOf="splitView"
-                Name="Contenedor">
-        </Frame>
+                
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon Tapped="FontIcon_Tapped" Glyph="&#xE715;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                    <TextBlock Margin="10,0,0,0" Text="Comentarios" VerticalAlignment="Center"/>
+                </StackPanel>
 
+                <StackPanel Orientation="Horizontal">
+                    <FontIcon Glyph="&#xED15;" HorizontalAlignment="Left" Height="48" Width="48"/>
+                    <TextBlock Margin="10,0,0,0" Text="Redes Sociales" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+            
+          
         
             
-        
+
+        </SplitView>
+
+        <StackPanel 
+            RelativePanel.RightOf="splitView" 
+            RelativePanel.AlignBottomWithPanel="True"
+            RelativePanel.AlignTopWith ="splitView"
+            RelativePanel.AlignRightWithPanel="True">
+        <Frame 
+            HorizontalAlignment="Center"
+            Name="Contenedor">
+                     
+        </Frame>
+        </StackPanel>
+
+
+
     </RelativePanel>
 </Page>

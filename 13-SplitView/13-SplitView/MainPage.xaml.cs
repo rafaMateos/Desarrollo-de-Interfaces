@@ -52,5 +52,16 @@ namespace _13_SplitView
 
 
         }
+
+        private void FontIcon_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Contenedor.Navigate(typeof(formulario));
+
+        }
+
+        private void splitView_PaneOpening(SplitView sender, object args)
+        {
+
+        }
     }
 }
