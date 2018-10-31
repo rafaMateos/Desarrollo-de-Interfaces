@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="_13_SplitView_Terminado.formulario"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_13_SplitView_Terminado"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <StackPanel Margin="25" Name="form" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+            <TextBlock Text="Nombre: " FontSize="25" Margin="10">
+
+            </TextBlock>
+            <TextBox Width="500">
+
+            </TextBox>
+
+        </StackPanel>
+
+        <StackPanel Margin="25" Name="form2" RelativePanel.Below="form" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+            <TextBlock Text="Apellidos: " FontSize="25" Margin="10">
+
+            </TextBlock>
+            <TextBox Width="500">
+
+            </TextBox>
+
+        </StackPanel>
+
+        <StackPanel Margin="25" Name="form3" RelativePanel.Below="form2" Orientation="Horizontal" RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True">
+            <TextBlock Text="Direccion: " FontSize="25" Margin="10">
+
+            </TextBlock>
+            <TextBox Width="500">
+
+            </TextBox>
+
+        </StackPanel>
+    </RelativePanel>
+</Page>
