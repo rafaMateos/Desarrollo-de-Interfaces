@@ -23,6 +23,7 @@
             Height="52" 
             Width="52"
              />
+			 
         </StackPanel>
 
         <StackPanel RelativePanel.AlignRightWithPanel="True" 
