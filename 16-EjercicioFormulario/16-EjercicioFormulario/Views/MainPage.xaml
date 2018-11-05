@@ -1,0 +1,68 @@
+﻿<Page
+    x:Class="_16_EjercicioFormulario.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_16_EjercicioFormulario"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:VM ="using:_16_EjercicioFormulario.ViewModels"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <VM:MainPageViewModel>
+        </VM:MainPageViewModel>
+    </Page.DataContext>
+
+    <RelativePanel>
+
+        <!--¿El view model va a necesitar los cambios de la vista? Por eso ponemos el twoWay-->
+        <ListView Name="listado_per"
+            ItemsSource="{Binding listadoPersonas}" 
+            SelectedItem="{Binding PersonaSelec,Mode=TwoWay}">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock 
+                            Text="{Binding Path=nombre}">
+                        </TextBlock>
+                        <TextBlock 
+                            Text="{Binding Path=apellidos}" 
+                            Margin="5,0,0,0"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+        <Grid RelativePanel.RightOf="listado_per">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Nombre:" Grid.Column="0"
+                       Grid.Row="0"></TextBlock>
+
+                <TextBox 
+                    PlaceholderText="Nombre" 
+                    Text="{Binding Path=PersonaSelec.nombre,
+                    Mode=TwoWay}"></TextBox>
+            </StackPanel>
+
+
+        </Grid>
+
+    </RelativePanel>
+   
+</Page>

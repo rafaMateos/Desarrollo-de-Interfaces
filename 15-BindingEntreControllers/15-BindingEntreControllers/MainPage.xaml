@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="_15_BindingEntreControllers.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_15_BindingEntreControllers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel>
+
+    <Slider
+        Name="slValue"
+        Margin="50"
+        Maximum="100" 
+        TickPlacement="BottomRight" 
+        StepFrequency="5" 
+        Value="{Binding ElementName=flama, Path=FontSize,UpdateSourceTrigger=PropertyChanged}">
+        
+    </Slider>
+        
+    <TextBlock
+        Name="flama"
+        Margin="50" 
+        Text="Flama"
+        FontSize="{Binding ElementName=slValue,Path=Value,Mode=TwoWay}">
+        
+    </TextBlock>
+
+        <TextBox 
+            Name="text"
+            Margin="50" 
+            Text="{Binding ElementName=slValue, Path=Value, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+        
+    </TextBox>
+
+    </StackPanel>
+</Page>
