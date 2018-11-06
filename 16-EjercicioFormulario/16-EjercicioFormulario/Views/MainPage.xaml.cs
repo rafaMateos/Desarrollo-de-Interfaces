@@ -26,5 +26,10 @@ namespace _16_EjercicioFormulario
         {
             this.InitializeComponent();
         }
+
+        private void listado_per_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

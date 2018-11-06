@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Models\Entidades\clsDepartamento.cs" />
     <Compile Include="Models\Entidades\clsPersona.cs" />
+    <Compile Include="Models\Manejadora\clsListadoDepartamento.cs" />
     <Compile Include="Models\Manejadora\ListadoPersona.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="Views\MainPage.xaml.cs">

@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:VM ="using:_16_EjercicioFormulario.ViewModels"
     mc:Ignorable="d"
+    Width="400"
+    Height="250"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
@@ -17,9 +19,11 @@
     <RelativePanel>
 
         <!--¿El view model va a necesitar los cambios de la vista? Por eso ponemos el twoWay-->
-        <ListView Name="listado_per"
+        <ListView Background="AliceBlue" 
+            Name="listado_per" RelativePanel.AlignTopWithPanel="True"
+                  RelativePanel.AlignBottomWithPanel="True"
             ItemsSource="{Binding listadoPersonas}" 
-            SelectedItem="{Binding PersonaSelec,Mode=TwoWay}">
+            SelectedItem="{Binding PersonaSelec,Mode=TwoWay}" SelectionChanged="listado_per_SelectionChanged">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -37,28 +41,75 @@
         </ListView>
 
 
-        <Grid RelativePanel.RightOf="listado_per">
+        <Grid RelativePanel.RightOf="listado_per"  
+              RelativePanel.AlignRightWithPanel="True"
+              RelativePanel.AlignBottomWithPanel="True"
+              RelativePanel.AlignTopWithPanel="True"
+              Background="#EAA406">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
 
-            <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Nombre:" Grid.Column="0"
-                       Grid.Row="0"></TextBlock>
-
-                <TextBox 
+            <StackPanel  Orientation="Horizontal" Grid.Column="0"  Grid.Row="0">
+                <TextBlock Text="Nombre:" 
+                      ></TextBlock>
+                <TextBox Background="White"
+                         
                     PlaceholderText="Nombre" 
                     Text="{Binding Path=PersonaSelec.nombre,
                     Mode=TwoWay}"></TextBox>
             </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0"  Grid.Row="1">
+                <TextBlock Text="Apellidos:" 
+                      ></TextBlock>
+                <TextBox Background="White"
+                    PlaceholderText="Apellidos" 
+                    Text="{Binding Path=PersonaSelec.apellidos,
+                    Mode=TwoWay}"></TextBox>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0"  Grid.Row="2">
+                <TextBlock Text="Direccion:" 
+                      ></TextBlock>
+                <TextBox Background="White"
+                    PlaceholderText="Direccion" 
+                    Text="{Binding Path=PersonaSelec.direccion,
+                    Mode=TwoWay}"></TextBox>
+            </StackPanel>
+
+
+
+            <StackPanel Orientation="Horizontal" Grid.Column="0"  Grid.Row="3">
+                <TextBlock Text="Telefono:" 
+                      ></TextBlock>
+                <TextBox Background="White"
+                    PlaceholderText="Telefono" 
+                    Text="{Binding Path=PersonaSelec.telefono,
+                    Mode=TwoWay}"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="4">
+
+
+                <ComboBox x:Name="ListadoDep"
+                    ItemsSource="{Binding ListadoDep}"
+                    SelectedValuePath="{Binding ListadoDep}"
+                    
+                />
+
+            </StackPanel>
+
 
 
         </Grid>

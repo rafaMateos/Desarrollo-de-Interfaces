@@ -8,17 +8,25 @@ using System.Threading.Tasks;
 
 namespace _16_EjercicioFormulario.ViewModels
 {
-   public class MainPageViewModel:INotifyPropertyChanged
-   {
+   public class MainPageViewModel: INotifyPropertyChanged
+    {
         #region PropPrivadas
         private List<clsPersona> _listadoPersonas;
         private clsPersona _PersonaSelec;
         private List<clsDepartamento> _listadoDep;
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string name)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+        }
+
+
         #endregion
 
-        #region propiedades publicas
+            #region propiedades publicas
         public List<clsPersona> listadoPersonas {
 
             get {
@@ -41,8 +49,9 @@ namespace _16_EjercicioFormulario.ViewModels
             set {
 
                 _PersonaSelec = value;
-                OnProp
-                
+                OnPropertyChanged("PersonaSelec");
+
+
             }
 
         }
@@ -60,13 +69,9 @@ namespace _16_EjercicioFormulario.ViewModels
 
         }
 
+       
         
-        private void NotifyPropertyChanged( String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        
-        #endregion
+                #endregion
 
         #region constructor
 
