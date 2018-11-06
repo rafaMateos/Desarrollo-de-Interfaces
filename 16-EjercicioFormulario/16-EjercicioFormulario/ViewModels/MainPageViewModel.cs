@@ -1,4 +1,5 @@
-﻿using _16_EjercicioFormulario.Models;
+﻿using _05_MVC_Ejercicio1.Models;
+using _16_EjercicioFormulario.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,6 +81,10 @@ namespace _16_EjercicioFormulario.ViewModels
             //CargarListadoPersonas
             ListadoPersona m = new ListadoPersona();
            _listadoPersonas =  m.listadoPersona();
+
+            //cargarListaDeps
+            clsListadoDepartamento listado = new clsListadoDepartamento();
+            _listadoDep = listado.ObtenerListado();
 
         }
 

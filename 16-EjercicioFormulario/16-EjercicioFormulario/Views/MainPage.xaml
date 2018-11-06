@@ -99,19 +99,19 @@
                     Mode=TwoWay}"></TextBox>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Grid.Row="4">
-
-
-                <ComboBox x:Name="ListadoDep"
-                    ItemsSource="{Binding ListadoDep}"
-                    SelectedValuePath="{Binding ListadoDep}"
+            <ComboBox Grid.Row="4" ItemsSource="">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Path= Id}">
+                            
+                        </TextBlock>
+                    </DataTemplate>
                     
-                />
-
-            </StackPanel>
-
-
-
+                </ComboBox.ItemTemplate>
+                
+            </ComboBox>
+             
+                 
         </Grid>
 
     </RelativePanel>
