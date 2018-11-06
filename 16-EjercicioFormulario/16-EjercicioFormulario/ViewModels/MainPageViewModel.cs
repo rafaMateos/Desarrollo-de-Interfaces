@@ -41,6 +41,7 @@ namespace _16_EjercicioFormulario.ViewModels
             set {
 
                 _PersonaSelec = value;
+                OnProp
                 
             }
 
@@ -59,12 +60,12 @@ namespace _16_EjercicioFormulario.ViewModels
 
         }
 
-        /*
-        private void NotifyPropertyChanged([] String propertyName = "")
+        
+        private void NotifyPropertyChanged( String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        */
+        
         #endregion
 
         #region constructor
