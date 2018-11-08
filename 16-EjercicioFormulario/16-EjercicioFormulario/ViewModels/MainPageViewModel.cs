@@ -15,6 +15,7 @@ namespace _16_EjercicioFormulario.ViewModels
         private List<clsPersona> _listadoPersonas;
         private clsPersona _PersonaSelec;
         private List<clsDepartamento> _listadoDep;
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -45,7 +45,8 @@
               RelativePanel.AlignRightWithPanel="True"
               RelativePanel.AlignBottomWithPanel="True"
               RelativePanel.AlignTopWithPanel="True"
-              Background="#EAA406">
+              Background="BlanchedAlmond"
+              >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -99,19 +100,26 @@
                     Mode=TwoWay}"></TextBox>
             </StackPanel>
 
-            <ComboBox Grid.Row="4" ItemsSource="">
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <TextBlock Text="Departament:" 
+                      ></TextBlock>
+                
+            <ComboBox  ItemsSource="{Binding ListadoDep}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
-                        <TextBlock Text="{Binding Path= Id}">
-                            
+                        <TextBlock Text="{Binding Path=Nombre, 
+                            Mode=TwoWay}"
+                                   >
+                         
                         </TextBlock>
                     </DataTemplate>
                     
                 </ComboBox.ItemTemplate>
                 
             </ComboBox>
-             
-                 
+            </StackPanel>
+
+
         </Grid>
 
     </RelativePanel>
