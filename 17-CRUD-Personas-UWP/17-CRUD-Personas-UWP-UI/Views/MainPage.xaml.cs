@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
-namespace _17_CRUD_Personas_UWP_UI
+namespace _17_CRUD_Personas_UWP_Entidades
 {
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
@@ -25,6 +25,11 @@ namespace _17_CRUD_Personas_UWP_UI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void listado_per_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

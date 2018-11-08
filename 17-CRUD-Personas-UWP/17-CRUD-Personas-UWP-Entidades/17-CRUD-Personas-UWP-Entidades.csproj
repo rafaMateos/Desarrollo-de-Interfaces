@@ -107,6 +107,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="clsDepartamento.cs" />
+    <Compile Include="clsPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\_17_CRUD_Personas_UWP_Entidades.rd.xml" />
   </ItemGroup>
