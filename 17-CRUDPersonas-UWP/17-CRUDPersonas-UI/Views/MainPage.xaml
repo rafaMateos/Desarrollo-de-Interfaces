@@ -18,6 +18,13 @@
     <RelativePanel>
 
         <ListView Margin="15"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}" SelectionChanged="lv_listado_SelectionChanged">
+            <ListView.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Text="Personas"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.HeaderTemplate>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
