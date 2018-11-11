@@ -5,16 +5,10 @@
     xmlns:local="using:_17_CRUD_Personas_UWP_Entidades"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:VM ="using:_17_CRUD_Personas_UWP_Entidades.ViewModels"
     mc:Ignorable="d"
-    Width="400"
-    Height="250"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.DataContext>
-        <VM:MainPageViewModel>
-        </VM:MainPageViewModel>
-    </Page.DataContext>
+   
 
     <RelativePanel>
 
@@ -75,7 +69,7 @@
                       ></TextBlock>
                 <TextBox Background="White"
                     PlaceholderText="Apellidos" 
-                    Text="{Binding Path=PersonaSelec.apellidos,
+                    Text="{Binding Path=PersonaSelec.Apellidos,
                     Mode=TwoWay}"></TextBox>
             </StackPanel>
 

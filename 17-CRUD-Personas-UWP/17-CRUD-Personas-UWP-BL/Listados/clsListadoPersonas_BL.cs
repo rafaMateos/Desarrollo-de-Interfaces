@@ -1,5 +1,5 @@
-﻿using _07_CRUDPersonas_DAL.Listado;
-using _07_CRUDPersonas_Entidades;
+﻿using _17_CRUD_Personas_UWP_DAL.Listado;
+using _17_CRUD_Personas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;

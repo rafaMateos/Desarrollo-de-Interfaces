@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace _17_CRUD_Personas_UWP_Entidades
 {
@@ -18,6 +17,10 @@ namespace _17_CRUD_Personas_UWP_Entidades
             this.Id = Id;
             this.Nombre = Nombre;
     }
+
+        public clsDepartamento() {
+
+        }
         #endregion
 
 

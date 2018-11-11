@@ -1,5 +1,5 @@
-﻿using _07_CRUDPersonas_DAL.Manejadoras;
-using _07_CRUDPersonas_Entidades;
+﻿using _07_CRUDPersonas_UWP_DAL.Manejadoras;
+using _17_CRUD_Personas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;

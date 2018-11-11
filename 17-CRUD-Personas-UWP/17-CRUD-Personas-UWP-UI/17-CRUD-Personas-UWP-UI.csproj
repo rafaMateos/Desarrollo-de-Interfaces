@@ -130,7 +130,16 @@
       <Version>6.1.9</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\17-CRUD-Personas-UWP-BL\17-CRUD-Personas-UWP-BL.csproj">
+      <Project>{c628d9f3-d226-4a8a-af7f-33846c7e7076}</Project>
+      <Name>17-CRUD-Personas-UWP-BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\17-CRUD-Personas-UWP-Entidades\17-CRUD-Personas-UWP-Entidades.csproj">
+      <Project>{5dafc786-f273-4f1c-9cb0-db359f2bd593}</Project>
+      <Name>17-CRUD-Personas-UWP-Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

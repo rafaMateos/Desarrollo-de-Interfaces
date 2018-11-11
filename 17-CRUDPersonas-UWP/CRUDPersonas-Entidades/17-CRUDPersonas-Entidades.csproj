@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D6FA837-AB51-4716-A6A0-528380C726EB}</ProjectGuid>
+    <ProjectGuid>{D467F5C0-437F-439E-83F9-3E1A2CF1DCA3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_17_CRUD_Personas_UWP_DAL</RootNamespace>
-    <AssemblyName>17-CRUD-Personas-UWP-DAL</AssemblyName>
+    <RootNamespace>CRUDPersonas_Entidades</RootNamespace>
+    <AssemblyName>CRUDPersonas-Entidades</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
@@ -106,24 +106,15 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Conexion\clsMyConnection.cs" />
-    <Compile Include="Listado\clsListadoDepartamento_DAL.cs" />
-    <Compile Include="Listado\clsListadoPersonas_DAL.cs" />
-    <Compile Include="Manejadoras\clsManejadoraPersonaDal.cs" />
+    <Compile Include="clsDepartamento.cs" />
+    <Compile Include="clsPersona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\_17_CRUD_Personas_UWP_DAL.rd.xml" />
+    <EmbeddedResource Include="Properties\CRUDPersonas_Entidades.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.9</Version>
+      <Version>6.1.7</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\17-CRUD-Personas-UWP-Entidades\17-CRUD-Personas-UWP-Entidades.csproj">
-      <Project>{5dafc786-f273-4f1c-9cb0-db359f2bd593}</Project>
-      <Name>17-CRUD-Personas-UWP-Entidades</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

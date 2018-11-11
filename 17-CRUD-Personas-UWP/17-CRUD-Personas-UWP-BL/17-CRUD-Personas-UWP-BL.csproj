@@ -107,6 +107,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Listados\clsListadoDep_BL.cs" />
     <Compile Include="Listados\clsListadoPersonas_BL.cs" />
     <Compile Include="Manejadora\clsManejadoraPersona_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,7 +118,16 @@
       <Version>6.1.9</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\17-CRUD-Personas-UWP-DAL\17-CRUD-Personas-UWP-DAL.csproj">
+      <Project>{8d6fa837-ab51-4716-a6a0-528380c726eb}</Project>
+      <Name>17-CRUD-Personas-UWP-DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\17-CRUD-Personas-UWP-Entidades\17-CRUD-Personas-UWP-Entidades.csproj">
+      <Project>{5dafc786-f273-4f1c-9cb0-db359f2bd593}</Project>
+      <Name>17-CRUD-Personas-UWP-Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -1,10 +1,11 @@
 ﻿
+using _07_CRUDPersonas_BL.Listados;
+using _17_CRUD_Personas_UWP_BL.Listados;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace _17_CRUD_Personas_UWP_Entidades.ViewModels
 {
@@ -79,12 +80,13 @@ namespace _17_CRUD_Personas_UWP_Entidades.ViewModels
         public MainPageViewModel() {
 
             //CargarListadoPersonas
-            ListadoPersona m = new ListadoPersona();
-           _listadoPersonas =  m.listadoPersona();
+
+             clsListadoPersonas_BL m = new clsListadoPersonas_BL();
+            _listadoPersonas = m.ListadoPersonas_BL();
 
             //cargarListaDeps
-            clsListadoDepartamento listado = new clsListadoDepartamento();
-            _listadoDep = listado.ObtenerListado();
+            clsListadoDep_BL listaDep = new clsListadoDep_BL();
+            _listadoDep = listaDep.ListadoDep_BL();
 
         }
 
