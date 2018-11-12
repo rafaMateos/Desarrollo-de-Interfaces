@@ -49,6 +49,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
          
@@ -137,8 +138,12 @@
                 <FontIcon HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE105;" Margin="8,8,8,8" FontSize="30"></FontIcon>
             </StackPanel>
 
-            <StackPanel  HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
-                <FontIcon HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Glyph="&#xE107;" Margin="8,8,8,8" FontSize="30"></FontIcon>
+            <StackPanel  HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="8">
+                <AppBarButton Command="{Binding Path=eliminarCommand}" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Delete" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+            </StackPanel>
+
+            <StackPanel  HorizontalAlignment="Stretch" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="8">
+                <AppBarButton Command="{Binding Path=ActualizarListadoCommando}"  HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Refresh" Margin="8,8,8,8" FontSize="30"></AppBarButton>
             </StackPanel>
 
 
