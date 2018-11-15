@@ -21,15 +21,33 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private clsPersona _PersonaSelecionada;
         private DelegateCommand _eliminarCommand;
         private DelegateCommand _actualizarListadoCommand;
+        private DelegateCommand _guardarCommand;
+        private DelegateCommand _insertarPersona;
+        private bool _esEditar;
 
 
 
 
         #endregion
 
-        #region propiedades publicas
+        //#region propiedades publicas
 
 
+        public bool isEditar {
+
+            get {
+
+                return _esEditar;
+            }
+
+            set{
+
+                _esEditar = value;
+                    
+            }
+            
+
+        }
         public List<clsPersona> ListadoDePersonas {
 
             get {
@@ -75,7 +93,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
                 //LLamamos a canExecute para que habilite el comandoEliminar
                 _eliminarCommand.RaiseCanExecuteChanged();
-
+                _guardarCommand.RaiseCanExecuteChanged();
                 NotifyPropertyChanged("PersonaSelecionada");
             }
         }
@@ -102,6 +120,69 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
         }
 
+        public DelegateCommand GuardarCommand {
+
+            get{
+
+                _guardarCommand = new DelegateCommand(GuardarPersonaCommand_ExecutedAsync,GuardarPersonaCommand_CanExecute);
+                return _guardarCommand;
+
+            }
+
+        }
+
+        public DelegateCommand InsertarPersonaCommand() {
+
+            _insertarPersona = new DelegateCommand(insertarPersonaCommand_Execute);
+            return _insertarPersona;
+
+        }
+
+     
+
+
+
+
+
+        #region methods
+
+        private async void  GuardarPersonaCommand_ExecutedAsync()
+        {
+
+            clsManejadoraPersonas_BL gestora = new clsManejadoraPersonas_BL();
+            ContentDialog confirmarActualizado = new ContentDialog();
+            clsListadoPersonas_BL gestoraListadosPersonas = new clsListadoPersonas_BL();
+
+
+
+            try
+            {
+                //Actualizamos la persona
+                gestora.actualizarPersona_BL(PersonaSelecionada);
+
+                //Volvemos a cargar el listado
+                _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                NotifyPropertyChanged("ListadoDePersonas");
+
+                confirmarActualizado.Title = "Todo correcto";
+                confirmarActualizado.Content = "Esto va como un tiro, has actualizado flama";
+                confirmarActualizado.PrimaryButtonText = "Aceptar";
+                ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
+
+            }
+            catch (Exception e) {
+
+                //Mostramos los mensaje que creamos conveniente.
+                confirmarActualizado.Title = "Algo va mal";
+                confirmarActualizado.Content = "¿Que ha pasado? Po nose algo va mal";
+                confirmarActualizado.PrimaryButtonText = "Aceptar";
+                ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
+
+
+            }
+
+
+        }
         private void ActualizarListadoCommand_Executed()
         {
             clsListadoPersonas_BL gestoraListadosPersonas = new clsListadoPersonas_BL();
@@ -111,6 +192,10 @@ namespace _17_CRUDPersonas_UI.ViewModels
             NotifyPropertyChanged("ListadoDePersonas");
         }
 
+        private void insertarPersonaCommand_Execute()
+        {
+
+        }
 
         /// <summary>
         /// 
@@ -157,6 +242,23 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
         }
 
+        private bool GuardarPersonaCommand_CanExecute()
+        {
+
+            bool sePuedeGuardar = false;
+
+            if (PersonaSelecionada != null)
+            {
+
+                sePuedeGuardar = true;
+            }
+
+            return sePuedeGuardar;
+
+        }
+
+
+
         /// <summary>
         /// Funcion que devuelve un boleano para habilitar o desabilitar los controles bindiados al comando eliminar
         /// </summary>
@@ -175,7 +277,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         }
 
-        #endregion
+        
 
 
         #region constructores
@@ -203,3 +305,4 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
     }
 }
+#endregion

@@ -63,6 +63,7 @@
                 </TextBlock>
                 <TextBox Grid.Column="0" Grid.Row="1" 
                      Text="{Binding Path=PersonaSelecionada.nombre, Mode=TwoWay}"
+                      
                      Margin="15,5,0,5"
                      PlaceholderText="Nombre"
                      Width="200"></TextBox>
@@ -131,11 +132,11 @@
             </StackPanel>
 
             <StackPanel  HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
-                <FontIcon HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Glyph="&#xE109;" Margin="8,8,8,8" FontSize="30"></FontIcon>
+                <AppBarButton HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
-                <FontIcon HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Glyph="&#xE105;" Margin="8,8,8,8" FontSize="30"></FontIcon>
+            <StackPanel HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
+                <AppBarButton Command="{Binding Path=GuardarCommand}" HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Icon="Save" Margin="8,8,8,8" FontSize="30"></AppBarButton>
             </StackPanel>
 
             <StackPanel  HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="8">
