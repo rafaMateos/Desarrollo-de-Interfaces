@@ -307,7 +307,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         #endregion
 
-
+        
         //Al utilizar clcVMBase no haxce falta
         /*protected void OnPropertyChanged(string name)
         {
@@ -327,5 +327,6 @@ namespace _17_CRUDPersonas_UI.ViewModels
  * para realizar la accion, ya que el llamara a un metodo de la clase clsVMBase.(RaiseCanExecuteChanged)
  * Debemos llamar a dicho metodo (RaiseCanExecuteChanged) en la accion que queremos que lo compruebe.
  * En nuestro ejemplo debemos llamarlo al presionar en una persona.
- 
+ * 
+ * IMPORTATE!!!!!! Preguntar a fernando por la posibilidad de cosas nuevas en el examen
 */

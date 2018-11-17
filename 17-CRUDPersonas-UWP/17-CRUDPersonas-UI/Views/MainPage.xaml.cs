@@ -28,6 +28,5 @@ namespace _17_CRUDPersonas_UI
             this.InitializeComponent();
         }
 
-        
     }
 }
