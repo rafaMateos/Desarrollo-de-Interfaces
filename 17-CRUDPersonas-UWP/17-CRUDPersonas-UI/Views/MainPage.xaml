@@ -17,7 +17,7 @@
 
     <RelativePanel>
 
-        <ListView Margin="15"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}" SelectionChanged="lv_listado_SelectionChanged">
+        <ListView Margin="15"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">

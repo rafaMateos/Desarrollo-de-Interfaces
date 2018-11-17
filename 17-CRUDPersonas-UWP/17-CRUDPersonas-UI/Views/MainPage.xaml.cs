@@ -28,9 +28,6 @@ namespace _17_CRUDPersonas_UI
             this.InitializeComponent();
         }
 
-        private void lv_listado_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -25,7 +25,6 @@ namespace _17_CRUDPersonas_BL.Listados
             return listado;
 
         }
-    
 
     }
 }

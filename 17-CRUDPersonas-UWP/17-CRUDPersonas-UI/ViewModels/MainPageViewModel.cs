@@ -21,15 +21,15 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private clsPersona _PersonaSelecionada;
 
         //Delegate commando para asi hacer cada una de las acciones
-        private DelegateCommand _eliminarCommand;
+        private DelegateCommand _eliminarCommand;//Elimina una persona en concreto
         private DelegateCommand _actualizarListadoCommand;//Actualiza el listado
-        private DelegateCommand _guardarCommand;
-        private DelegateCommand _insertarPersona;
-        private bool _esEditar;
+        private DelegateCommand _guardarCommand;//Guarda una persona la cual ha sido actualizada
+        private DelegateCommand _insertarPersona;//Inserta una persona la cual has introducido sus datos.
+        private bool _esEditar;//propiedas la cual nos indicara si el usuario desea insertar una persona o actualizarla
+        //y asi poder diferenciar que quiere hacer cada boton.
         #endregion
 
         #region propiedades publicas
-
         public bool isEditar {
 
             get {
@@ -317,3 +317,15 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
     }
 }
+
+//A tener en cuenta:
+
+/*
+ * Cuando queramos que un boton este o no habilitado , debemos de crear los metodos:
+ * nombreAccion_Execute y nombreAccion_CanExecute.
+ * CanExecute es un metodo que nos dira cuando queremos que el boton se active o no
+ * para realizar la accion, ya que el llamara a un metodo de la clase clsVMBase.(RaiseCanExecuteChanged)
+ * Debemos llamar a dicho metodo (RaiseCanExecuteChanged) en la accion que queremos que lo compruebe.
+ * En nuestro ejemplo debemos llamarlo al presionar en una persona.
+ 
+*/
