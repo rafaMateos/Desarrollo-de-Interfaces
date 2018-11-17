@@ -19,19 +19,16 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private List<clsPersona> _ListadoDePersonas;
         private List<clsDepartamento> _ListadoDeDepartamentos;
         private clsPersona _PersonaSelecionada;
+
+        //Delegate commando para asi hacer cada una de las acciones
         private DelegateCommand _eliminarCommand;
-        private DelegateCommand _actualizarListadoCommand;
+        private DelegateCommand _actualizarListadoCommand;//Actualiza el listado
         private DelegateCommand _guardarCommand;
         private DelegateCommand _insertarPersona;
         private bool _esEditar;
-
-
-
-
         #endregion
 
-        //#region propiedades publicas
-
+        #region propiedades publicas
 
         public bool isEditar {
 
@@ -61,7 +58,6 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
 
         }
-
         public List<clsDepartamento> ListadoDeDepartamentos
         {
 
@@ -78,7 +74,6 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
 
         }
-
         public clsPersona PersonaSelecionada
         {
 
@@ -90,14 +85,12 @@ namespace _17_CRUDPersonas_UI.ViewModels
             set {
 
                 _PersonaSelecionada = value;
-
                 //LLamamos a canExecute para que habilite el comandoEliminar
                 _eliminarCommand.RaiseCanExecuteChanged();
                 _guardarCommand.RaiseCanExecuteChanged();
                 NotifyPropertyChanged("PersonaSelecionada");
             }
         }
-
         public DelegateCommand eliminarCommand
         {
             get {
@@ -108,7 +101,6 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
             }
         }
-
         public DelegateCommand ActualizarListadoCommando
         {
             get {
@@ -119,7 +111,6 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
             }
         }
-
         public DelegateCommand GuardarCommand {
 
             get{
@@ -130,59 +121,94 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
 
         }
+        public DelegateCommand InsertarPersonaCommand {
 
-        public DelegateCommand InsertarPersonaCommand() {
-
-            _insertarPersona = new DelegateCommand(insertarPersonaCommand_Execute);
-            return _insertarPersona;
+            get{
+                _insertarPersona = new DelegateCommand(insertarPersonaCommand_Execute);
+                return _insertarPersona;
+            }
+           
 
         }
-
-     
-
-
-
-
+        #endregion
 
         #region methods
 
         private async void  GuardarPersonaCommand_ExecutedAsync()
         {
-
+           
             clsManejadoraPersonas_BL gestora = new clsManejadoraPersonas_BL();
             ContentDialog confirmarActualizado = new ContentDialog();
             clsListadoPersonas_BL gestoraListadosPersonas = new clsListadoPersonas_BL();
 
-
-
-            try
+            if (_esEditar)
             {
-                //Actualizamos la persona
-                gestora.actualizarPersona_BL(PersonaSelecionada);
 
-                //Volvemos a cargar el listado
+                try
+                {
+                    //Actualizamos la persona
+                    gestora.actualizarPersona_BL(PersonaSelecionada);
+
+                    //Volvemos a cargar el listado
+                    _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                    NotifyPropertyChanged("ListadoDePersonas");
+
+                    confirmarActualizado.Title = "Todo correcto";
+                    confirmarActualizado.Content = "Esto va como un tiro, has actualizado flama";
+                    confirmarActualizado.PrimaryButtonText = "Aceptar";
+                    ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
+
+                }
+                catch (Exception e)
+                {
+
+                    //Mostramos los mensaje que creamos conveniente.
+                    confirmarActualizado.Title = "Algo va mal";
+                    confirmarActualizado.Content = "¿Que ha pasado? Po nose algo va mal";
+                    confirmarActualizado.PrimaryButtonText = "Aceptar";
+                    ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
+                    
+
+                }
+
+
+            }
+            else {
+
+
+                gestora.insertarPersona_BL(PersonaSelecionada);
+
                 _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
                 NotifyPropertyChanged("ListadoDePersonas");
 
+                PersonaSelecionada = new clsPersona();
+
                 confirmarActualizado.Title = "Todo correcto";
-                confirmarActualizado.Content = "Esto va como un tiro, has actualizado flama";
+                confirmarActualizado.Content = "Esto va como un tiro, has insertado flama";
                 confirmarActualizado.PrimaryButtonText = "Aceptar";
                 ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
+                _esEditar = true;
 
             }
-            catch (Exception e) {
-
-                //Mostramos los mensaje que creamos conveniente.
-                confirmarActualizado.Title = "Algo va mal";
-                confirmarActualizado.Content = "¿Que ha pasado? Po nose algo va mal";
-                confirmarActualizado.PrimaryButtonText = "Aceptar";
-                ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
 
 
-            }
 
 
         }
+        private bool GuardarPersonaCommand_CanExecute()
+        {
+
+            bool sePuedeGuardar = false;
+
+            if (PersonaSelecionada != null)
+            {
+                sePuedeGuardar = true;
+            }
+
+            return sePuedeGuardar;
+
+        }
+
         private void ActualizarListadoCommand_Executed()
         {
             clsListadoPersonas_BL gestoraListadosPersonas = new clsListadoPersonas_BL();
@@ -194,12 +220,15 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         private void insertarPersonaCommand_Execute()
         {
+            PersonaSelecionada = new clsPersona();
+            _esEditar = false;
+
 
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
+       /// <summary>
+       /// Metodo por el cual se eliminara a una persona del listado
+       /// </summary>
         private async void EliminarCommand_Executed()
         {
             try {
@@ -222,6 +251,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
                         filas = m.BorrarPersonaPorID_BL(PersonaSelecionada.idPersona);
 
                         if (filas == 1) {
+
                             _ListadoDePersonas = listadoper.ListadoCompletoPersonas_BL();
                             NotifyPropertyChanged("ListadoDePersonas");
                         }
@@ -240,25 +270,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 //TODO Lanazar dialogo con error
 
             }
-        }
-
-        private bool GuardarPersonaCommand_CanExecute()
-        {
-
-            bool sePuedeGuardar = false;
-
-            if (PersonaSelecionada != null)
-            {
-
-                sePuedeGuardar = true;
-            }
-
-            return sePuedeGuardar;
-
-        }
-
-
-
+        }   
         /// <summary>
         /// Funcion que devuelve un boleano para habilitar o desabilitar los controles bindiados al comando eliminar
         /// </summary>
@@ -277,8 +289,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         }
 
-        
-
+     
+        #endregion
 
         #region constructores
 
@@ -290,7 +302,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
             //Cargar el listado de personas y departamentos.
             _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
             _ListadoDeDepartamentos = gestoraListadosDepartamentos.ListadoCompletoDepartamentos_BL();
-
+            _esEditar = true;
         }
 
         #endregion
@@ -305,4 +317,3 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
     }
 }
-#endregion

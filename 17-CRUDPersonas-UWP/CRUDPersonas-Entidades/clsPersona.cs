@@ -46,7 +46,7 @@ namespace _17_CRUDPersonas_Entidades
             this.idDepartamento = 0;
             this.nombre = "";
             this.apellidos = "";
-            this.fechaNacimiento = new DateTime();
+            this.fechaNacimiento = new DateTime(2010, 1, 1);
             this.direccion = "";
             this.telefono = "";
 

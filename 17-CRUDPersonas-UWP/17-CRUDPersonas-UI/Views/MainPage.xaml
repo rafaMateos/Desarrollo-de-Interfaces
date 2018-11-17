@@ -132,7 +132,7 @@
             </StackPanel>
 
             <StackPanel  HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
-                <AppBarButton HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+                <AppBarButton Command="{Binding Path=InsertarPersonaCommand, Mode=TwoWay}" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
