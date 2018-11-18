@@ -166,6 +166,7 @@ namespace _17_CRUDPersonas_DAL.Manejadoras
             SqlConnection conexion = null;
 
             SqlCommand miComando = new SqlCommand();
+            //miComando.CommandTimeout = 0;
 
             
 
