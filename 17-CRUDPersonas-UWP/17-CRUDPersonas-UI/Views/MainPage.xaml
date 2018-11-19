@@ -36,6 +36,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        
         <Grid Name="g_editar" RelativePanel.RightOf="lv_listado">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -131,20 +132,21 @@
                      ></TextBox>
             </StackPanel>
 
-            <StackPanel  HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
+            <StackPanel HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
                 <AppBarButton Command="{Binding Path=InsertarPersonaCommand, Mode=TwoWay}" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
-            </StackPanel>
 
-            <StackPanel HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
                 <AppBarButton Command="{Binding Path=GuardarCommand}" HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Icon="Save" Margin="8,8,8,8" FontSize="30"></AppBarButton>
-            </StackPanel>
 
-            <StackPanel  HorizontalAlignment="Right" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="8">
                 <AppBarButton Command="{Binding Path=eliminarCommand}" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Delete" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+
+                <AppBarButton Command="{Binding Path=ActualizarListadoCommando}"  HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Refresh" Margin="8,8,8,8" FontSize="30"></AppBarButton>
             </StackPanel>
 
-            <StackPanel  HorizontalAlignment="Stretch" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="8">
-                <AppBarButton Command="{Binding Path=ActualizarListadoCommando}"  HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Refresh" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+            <StackPanel Grid.Row="8" Orientation="Horizontal">
+                
+                <TextBox  Text="{Binding TextoBuscar, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Height="40"></TextBox>
+                <AppBarButton  VerticalAlignment="Center"  Icon="Find"></AppBarButton>
+                
             </StackPanel>
 
 
@@ -176,13 +178,10 @@
 
             </StackPanel>
             
-                 
-                    
-            
-
 
         </Grid>
 
+       
 
 
     </RelativePanel>

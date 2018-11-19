@@ -17,6 +17,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
         #region propiedades privadas
 
         private List<clsPersona> _ListadoDePersonas;
+        private List<clsPersona> _listadoCompleto;
         private List<clsDepartamento> _ListadoDeDepartamentos;
         private clsPersona _PersonaSelecionada;
 
@@ -26,10 +27,27 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private DelegateCommand _guardarCommand;//Guarda una persona la cual ha sido actualizada
         private DelegateCommand _insertarPersona;//Inserta una persona la cual has introducido sus datos.
         private bool _esEditar;//propiedas la cual nos indicara si el usuario desea insertar una persona o actualizarla
+        private String _textoBuscar;
         //y asi poder diferenciar que quiere hacer cada boton.
         #endregion
 
         #region propiedades publicas
+
+        public String TextoBuscar {
+            get {
+
+                return _textoBuscar;
+
+            }
+            set {
+
+                _textoBuscar = value;
+                FiltrarListado(_textoBuscar);
+                NotifyPropertyChanged("ListadoDePersonas");
+
+            }
+        }
+
         public bool isEditar {
 
             get {
@@ -188,6 +206,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 confirmarActualizado.PrimaryButtonText = "Aceptar";
                 ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
                 _esEditar = true;
+                PersonaSelecionada = null;
 
             }
 
@@ -213,9 +232,19 @@ namespace _17_CRUDPersonas_UI.ViewModels
         {
             clsListadoPersonas_BL gestoraListadosPersonas = new clsListadoPersonas_BL();
 
-            //Cargar el listado de personas y departamentos.
-            _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
-            NotifyPropertyChanged("ListadoDePersonas");
+            try
+            {
+                //Cargar el listado de personas y departamentos.
+                _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                NotifyPropertyChanged("ListadoDePersonas");
+                PersonaSelecionada = null;
+            }
+            catch (Exception e) {
+
+            }
+            
+
+
         }
 
         private void insertarPersonaCommand_Execute()
@@ -289,6 +318,29 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="texto"></param>
+        private void FiltrarListado(String texto) {
+
+            _ListadoDePersonas = new List<clsPersona>();
+            /*
+            foreach(clsPersona persona in _listadoCompleto) {
+
+                if (persona.nombre.Contains(texto)) {
+
+                    _ListadoDePersonas.Add(persona);
+
+                }
+
+            }
+            */
+            //bars.Where(b => b.Age >= 5 && b.Age <= 25).GroupBy(b => b.FooId).Select(g => g.FirstOrDefault().Foo).ToList();
+            _ListadoDePersonas = _listadoCompleto.Where(persona => persona.nombre.Contains(texto,StringComparison.CurrentCultureIgnoreCase) || persona.apellidos.Contains(texto,StringComparison.CurrentCultureIgnoreCase)).ToList();
+
+        }
+
      
         #endregion
 
@@ -300,9 +352,18 @@ namespace _17_CRUDPersonas_UI.ViewModels
             clsListadoDepartamentos_BL gestoraListadosDepartamentos = new clsListadoDepartamentos_BL();
 
             //Cargar el listado de personas y departamentos.
-            _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
-            _ListadoDeDepartamentos = gestoraListadosDepartamentos.ListadoCompletoDepartamentos_BL();
-            _esEditar = true;
+            try
+            {
+                _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                _ListadoDeDepartamentos = gestoraListadosDepartamentos.ListadoCompletoDepartamentos_BL();
+                _listadoCompleto = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                _esEditar = true;
+            }
+            catch (Exception e) {
+
+                //TODO 
+            }
+            
         }
 
         #endregion
