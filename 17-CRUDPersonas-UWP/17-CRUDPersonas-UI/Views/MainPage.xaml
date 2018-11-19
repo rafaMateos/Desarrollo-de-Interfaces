@@ -17,7 +17,7 @@
 
     <RelativePanel>
 
-        <ListView Margin="15"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}">
+        <ListView Visibility="Visible" Margin="15"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -37,7 +37,7 @@
         </ListView>
 
         
-        <Grid Name="g_editar" RelativePanel.RightOf="lv_listado">
+        <Grid Visibility="{Binding EsVisible}" Name="g_editar" RelativePanel.RightOf="lv_listado">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>

@@ -26,12 +26,24 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private DelegateCommand _actualizarListadoCommand;//Actualiza el listado
         private DelegateCommand _guardarCommand;//Guarda una persona la cual ha sido actualizada
         private DelegateCommand _insertarPersona;//Inserta una persona la cual has introducido sus datos.
+
         private bool _esEditar;//propiedas la cual nos indicara si el usuario desea insertar una persona o actualizarla
         private String _textoBuscar;
+        private String _esVisible;
         //y asi poder diferenciar que quiere hacer cada boton.
         #endregion
 
         #region propiedades publicas
+        public String EsVisible {
+
+            get {
+
+                return _esVisible;
+            }
+
+        }
+
+
 
         public String TextoBuscar {
             get {
@@ -107,6 +119,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 _eliminarCommand.RaiseCanExecuteChanged();
                 _guardarCommand.RaiseCanExecuteChanged();
                 NotifyPropertyChanged("PersonaSelecionada");
+                _esVisible = "Visible";
+                NotifyPropertyChanged("EsVisible");
             }
         }
         public DelegateCommand eliminarCommand
@@ -124,8 +138,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
             get {
 
                 _actualizarListadoCommand = new DelegateCommand(ActualizarListadoCommand_Executed);
+               
                 return _actualizarListadoCommand;
-                
 
             }
         }
@@ -143,6 +157,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
             get{
                 _insertarPersona = new DelegateCommand(insertarPersonaCommand_Execute);
+               
                 return _insertarPersona;
             }
            
@@ -176,6 +191,9 @@ namespace _17_CRUDPersonas_UI.ViewModels
                     confirmarActualizado.PrimaryButtonText = "Aceptar";
                     ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
 
+                    _esVisible = "Collapsed";
+                    NotifyPropertyChanged("EsVisible");
+
                 }
                 catch (Exception e)
                 {
@@ -185,7 +203,10 @@ namespace _17_CRUDPersonas_UI.ViewModels
                     confirmarActualizado.Content = "¿Que ha pasado? Po nose algo va mal";
                     confirmarActualizado.PrimaryButtonText = "Aceptar";
                     ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
-                    
+
+                    _esVisible = "Collapsed";
+                    NotifyPropertyChanged("EsVisible");
+
 
                 }
 
@@ -207,6 +228,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
                 _esEditar = true;
                 PersonaSelecionada = null;
+                _esVisible = "Collapsed";
+                NotifyPropertyChanged("EsVisible");
 
             }
 
@@ -238,6 +261,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
                 NotifyPropertyChanged("ListadoDePersonas");
                 PersonaSelecionada = null;
+                _esVisible = "Collapsed";
+                NotifyPropertyChanged("EsVisible");
             }
             catch (Exception e) {
 
@@ -283,6 +308,9 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
                             _ListadoDePersonas = listadoper.ListadoCompletoPersonas_BL();
                             NotifyPropertyChanged("ListadoDePersonas");
+
+                            _esVisible = "Collapsed";
+                            NotifyPropertyChanged("EsVisible");
                         }
                         
                     }
@@ -337,6 +365,13 @@ namespace _17_CRUDPersonas_UI.ViewModels
             }
             */
             //bars.Where(b => b.Age >= 5 && b.Age <= 25).GroupBy(b => b.FooId).Select(g => g.FirstOrDefault().Foo).ToList();
+
+            if (texto.Equals("")) {
+
+                _esVisible = "Collapsed";
+                NotifyPropertyChanged("EsVisible");
+            }
+
             _ListadoDePersonas = _listadoCompleto.Where(persona => persona.nombre.Contains(texto,StringComparison.CurrentCultureIgnoreCase) || persona.apellidos.Contains(texto,StringComparison.CurrentCultureIgnoreCase)).ToList();
 
         }
@@ -358,6 +393,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
                 _ListadoDeDepartamentos = gestoraListadosDepartamentos.ListadoCompletoDepartamentos_BL();
                 _listadoCompleto = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
                 _esEditar = true;
+                _esVisible = "Collapsed";
             }
             catch (Exception e) {
 
