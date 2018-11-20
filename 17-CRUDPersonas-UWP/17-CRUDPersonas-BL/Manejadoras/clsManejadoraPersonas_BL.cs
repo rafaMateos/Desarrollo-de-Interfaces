@@ -23,6 +23,7 @@ namespace _17_CRUDPersonas_BL.Manejadoras
 
             oPersona = gestora.personaPorID_DAL(IDPersona);
 
+            
 
             return oPersona;
 

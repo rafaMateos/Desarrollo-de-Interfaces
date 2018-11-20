@@ -9,13 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
+
+
 namespace _17_CRUDPersonas_UI.ViewModels
 {
     public class MainPageViewModel : clsVMBase
     {
 
         #region propiedades privadas
-
         private List<clsPersona> _ListadoDePersonas;
         private List<clsPersona> _listadoCompleto;
         private List<clsDepartamento> _ListadoDeDepartamentos;
@@ -32,7 +33,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
         private String _esVisible;
         //y asi poder diferenciar que quiere hacer cada boton.
         #endregion
-
+        
         #region propiedades publicas
         public String EsVisible {
 
@@ -391,7 +392,8 @@ namespace _17_CRUDPersonas_UI.ViewModels
             {
                 _ListadoDePersonas = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
                 _ListadoDeDepartamentos = gestoraListadosDepartamentos.ListadoCompletoDepartamentos_BL();
-                _listadoCompleto = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                //_listadoCompleto = gestoraListadosPersonas.ListadoCompletoPersonas_BL();
+                _listadoCompleto = _ListadoDePersonas;
                 _esEditar = true;
                 _esVisible = "Collapsed";
             }
