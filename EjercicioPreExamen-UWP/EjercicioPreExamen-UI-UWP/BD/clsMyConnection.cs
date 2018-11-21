@@ -38,7 +38,7 @@ namespace EjercicioPreExamen_UI_UWP.BD
             //this.server = "serverpersona.database.windows.net";
 
             this.dataBase = "lol";
-            this.user = "prueba";
+            this.user = "prueba2";
             this.pass = "123";
             //this.pass = "Sevillamalo16";
 
