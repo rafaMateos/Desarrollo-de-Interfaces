@@ -1,0 +1,30 @@
+﻿<Application 
+    x:Class="_19_Resources_Tipos.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_19_Resources_Tipos">
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <!--Utilizamos el diccionario de clase Botones1 lo utiliza el boton3-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Botones1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--Recurso para toda mi aplicacion que la utiliza el boton 2-->
+            <LinearGradientBrush x:Key="BotonePreciozoFlamaAplication">
+                <GradientStop Offset="0" Color="MediumSpringGreen"/>
+                <GradientStop Offset="0.2" Color="MediumSpringGreen"/>
+                <GradientStop Offset="0.4" Color="MediumSpringGreen"/>
+                <GradientStop Offset="0.6" Color="MediumSpringGreen"/>
+                <GradientStop Offset="0.8" Color="MediumSpringGreen"/>
+                <GradientStop Offset="1" Color="GreenYellow"/>
+            </LinearGradientBrush>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
+
+
+

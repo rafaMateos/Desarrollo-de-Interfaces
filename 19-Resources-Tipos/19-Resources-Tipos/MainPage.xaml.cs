@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
-namespace EjercicioPreExamen_UI_UWP
+namespace _19_Resources_Tipos
 {
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
@@ -25,14 +25,6 @@ namespace EjercicioPreExamen_UI_UWP
         public MainPage()
         {
             this.InitializeComponent();
-        }
-
-        /// <summary>
-        /// TODO: Pasar objetos
-        /// </summary>
-        public void probando() {
-            //Asi podemos pasar objetos o datos entre pantallas
-            this.Frame.Navigate(typeof(MainPage/*,Object o send data*/));
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="_19_Resources_Tipos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_19_Resources_Tipos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    >
+
+    <!--Page resources del primer boton-->
+    <Page.Resources>
+        <LinearGradientBrush x:Key="BotonePreciozoFlama">
+            <GradientStop Offset="0" Color="MediumSpringGreen"/>
+            <GradientStop Offset="0.2" Color="MediumSpringGreen"/>
+            <GradientStop Offset="0.4" Color="MediumSpringGreen"/>
+            <GradientStop Offset="0.6" Color="MediumSpringGreen"/>
+            <GradientStop Offset="0.8" Color="MediumSpringGreen"/>
+            <GradientStop Offset="1" Color="GreenYellow"/>
+        </LinearGradientBrush>
+
+    </Page.Resources>
+    
+    
+    <RelativePanel>
+        
+        <Button Name="botonPrimero" Background="{StaticResource BotonePreciozoFlama}" FontSize="15" Content="Mis colores son del pageResource" Margin="10" Width="250" Height="250"></Button>
+        <Button RelativePanel.RightOf="botonPrimero" Name="botonSegundo" Background="{StaticResource BotonePreciozoFlamaAplication}" FontSize="15" Content="Mis colores sel de app" Margin="10"  Width="250" Height="250"></Button>
+        <Button RelativePanel.RightOf="botonSegundo" Name="Boton3"  Background="{StaticResource BotonePreciozoFlamaDiccionarioRecursos }" FontSize="15" Content="Mis colores son del Diccionario" Margin="10"  Width="250" Height="250"></Button>
+        
+    </RelativePanel>
+
+
+</Page>

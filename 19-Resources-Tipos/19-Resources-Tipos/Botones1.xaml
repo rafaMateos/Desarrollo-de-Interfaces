@@ -1,0 +1,15 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_19_Resources_Tipos">
+
+    <LinearGradientBrush x:Key="BotonePreciozoFlamaDiccionarioRecursos">
+        <GradientStop Offset="0" Color="MediumSpringGreen"/>
+        <GradientStop Offset="0.2" Color="MediumSpringGreen"/>
+        <GradientStop Offset="0.4" Color="MediumSpringGreen"/>
+        <GradientStop Offset="0.6" Color="MediumSpringGreen"/>
+        <GradientStop Offset="0.8" Color="MediumSpringGreen"/>
+        <GradientStop Offset="1" Color="GreenYellow"/>
+    </LinearGradientBrush>
+
+</ResourceDictionary>
