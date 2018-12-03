@@ -13,7 +13,9 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
         protected virtual void NotifyPropertyChanged(string propertyName = null)
         {
+
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
         }
     }
 }

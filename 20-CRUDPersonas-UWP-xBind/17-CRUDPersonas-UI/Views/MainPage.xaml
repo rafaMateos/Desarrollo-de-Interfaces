@@ -11,8 +11,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    
-
     <Page.Resources>
         <Converter1:clsConverterFecha x:Key="Convert">
         </Converter1:clsConverterFecha>
@@ -23,7 +21,7 @@
 
     <RelativePanel>
 
-        <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{x:Bind ViewModel.ListadoDePersonas}" SelectedItem="{x:Bind ViewModel.PersonaSelecionada,Mode=TwoWay,Converter={StaticResource ConvertPersonaSeleccionada}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
+        <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{x:Bind ViewModel.ListadoDePersonas,Mode=TwoWay}" SelectedItem="{x:Bind ViewModel.PersonaSelecionada,Mode=TwoWay,Converter={StaticResource ConvertPersonaSeleccionada}}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
             <ListView.HeaderTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -139,7 +137,7 @@
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
-                <AppBarButton Command="{Binding Path=InsertarPersonaCommand, Mode=TwoWay}" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+                <AppBarButton Click="{x:Bind ViewModel.Eliminar_click}" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
 
                 <AppBarButton Click="{x:Bind ViewModel.GuardarPersona_click}" HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Icon="Save" Margin="8,8,8,8" FontSize="30"></AppBarButton>
 
@@ -150,7 +148,7 @@
 
             <StackPanel Grid.Row="8" Orientation="Horizontal">
 
-                <TextBox  Text="{Binding TextoBuscar, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Height="40"></TextBox>
+                <TextBox  Text="{x:Bind ViewModel.TextoBuscar, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Height="40"></TextBox>
                 <AppBarButton  VerticalAlignment="Center"  Icon="Find"></AppBarButton>
 
             </StackPanel>
@@ -167,9 +165,9 @@
             </StackPanel>
 
             <StackPanel Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100">
-                <ComboBox ItemsSource="{Binding ListadoDeDepartamentos}"
+                <ComboBox ItemsSource="{x:Bind  ViewModel.ListadoDeDepartamentos,Mode=TwoWay}"
                           SelectedValuePath="ID"
-                          SelectedItem="{Binding PersonaSelecionada,Mode=TwoWay}"
+                          SelectedItem="{x:Bind ViewModel.PersonaSelecionada,Mode=TwoWay}"
                           >
 
                     <ComboBox.ItemTemplate>

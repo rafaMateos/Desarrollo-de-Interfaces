@@ -58,8 +58,7 @@ namespace ExamenPrimeraEvaluacion_DI.ViewModels
                 if (_cartaSeleccionada != null) {
                     esPressedPressed();
                     NotifyPropertyChanged("CartaSeleccionada");
-
-
+                       
                 }
 
             }

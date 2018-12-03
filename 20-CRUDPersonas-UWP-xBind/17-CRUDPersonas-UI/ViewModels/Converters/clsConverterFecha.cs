@@ -14,9 +14,7 @@ namespace _17_CRUDPersonas_UI.ViewModels.Converters
 
             DateTime fecha =(DateTime)value;
             String ret;
-
             ret=  fecha.ToShortDateString();
-
             return ret;
 
         }

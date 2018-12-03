@@ -119,17 +119,13 @@ namespace _17_CRUDPersonas_UI.ViewModels
 
             set {
 
-
                 if (_PersonaSelecionada != value) {
 
                     _PersonaSelecionada = value;
                     NotifyPropertyChanged("PersonaSelecionada");
-                    _esVisible = "Visible";
-                    NotifyPropertyChanged("EsVisible");
 
                 }
 
-               
             }
         }
         
@@ -165,7 +161,7 @@ namespace _17_CRUDPersonas_UI.ViewModels
                     NotifyPropertyChanged("EsVisible");
 
                 }
-                catch (Exception )
+                catch (Exception)
                 {
 
                     //Mostramos los mensaje que creamos conveniente.
