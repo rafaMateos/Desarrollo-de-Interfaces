@@ -2,14 +2,12 @@
 using _17_CrudPersonas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.IO;
 using Newtonsoft.Json;
-
+using System.Threading.Tasks;
 
 namespace _17_CrudPersonas_UWP_DAL.Listados
 {
@@ -20,51 +18,73 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
         /// Funcion que nos devuelve un listado de personas.
         /// </summary>
         /// <returns>Listados de personas</returns>
-        public async Task<List<clsPersona>> getListadoPersonas() {
+        public async void getListadoPersonas() {
 
-            clsUriBase UriApi = new clsUriBase();
-            String uri = UriApi.getBaseUrlApi();
-          
-            Task<List<clsPersona>> lista = null;
+            /*
+            clsUriBase gestoriaApi = new clsUriBase();
+            String uri = gestoriaApi.getBaseUrlApi();
+            Uri UriApi = new Uri(uri);
+            List<clsPersona> lista = null;
+            Byte[] devuelveAlgoPorfa;
+            clsPersona newPer;
+            Formatting bf = new Formatting();
+            string ret;
+
+            HttpClient client = new HttpClient();
+
+            HttpResponseMessage response = await client.GetAsync(UriApi); //
+
+            devuelveAlgoPorfa = await response.Content.ReadAsByteArrayAsync(); //
+
+
+            for (int i = 0; i < devuelveAlgoPorfa.Count(); i++) {
+
+               
+
+            }
+
+            */
+            clsUriBase gestoriaApi = new clsUriBase();
 
             Console.WriteLine("Haciendo una petición al servio de clientes....");
 
             //se define la url del método de la api.
-           
-       
+            String uri = gestoriaApi.getBaseUrlApi();
+            Uri URL = new Uri(uri);
+
             //Se configura la petición.
-            HttpWebRequest peticion;
-            peticion = WebRequest.Create(uri) as HttpWebRequest;
+            WebRequest peticion;
+            peticion = WebRequest.Create(URL);
+           
             peticion.Method = "GET";
 
             // Respuesta
             try
             {
-                HttpWebResponse respuesta;
+                WebResponse respuesta = await peticion.GetResponseAsync();
                 //Si la peticion fue correcta
-                if ((int)respuesta.StatusCode == 200)
-                {
+              
+                
                     var reader = new StreamReader(respuesta.GetResponseStream());
                     string s = reader.ReadToEnd();
                     var arr = JsonConvert.DeserializeObject(s);
-                    Console.WriteLine(arr.ToString());
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("error");
-                }
+                    
+                 
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
+           
 
 
 
 
         }
+
+       
 
     }
 }

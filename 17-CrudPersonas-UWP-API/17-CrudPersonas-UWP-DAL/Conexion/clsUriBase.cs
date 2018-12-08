@@ -9,7 +9,7 @@ namespace _17_CrudPersonas_UWP_DAL.Conexion
    public class clsUriBase
     {
 
-       private String _URL_API = "rafaapirestpersona.azurewebsites.net/api/";
+       private String _URL_API = "http://rafaapirestpersona.azurewebsites.net/api/personas";
 
         /// <summary>
         /// Devuelve un string con la uri base de la api
