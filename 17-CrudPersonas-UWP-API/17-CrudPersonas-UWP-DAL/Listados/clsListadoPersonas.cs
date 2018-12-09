@@ -19,9 +19,10 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
         /// Funcion que nos devuelve un listado de personas.
         /// </summary>
         /// <returns>Listados de personas</returns>
-        public async void getListadoPersonas() {
+        public async Task<List<clsPersona>> getListadoPersonas()
+        {
 
-            /*
+
             clsUriBase gestoriaApi = new clsUriBase();
             String uri = gestoriaApi.getBaseUrlApi();
             Uri UriApi = new Uri(uri);
@@ -33,18 +34,27 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
 
             HttpClient client = new HttpClient();
 
-            HttpResponseMessage response = await client.GetAsync(UriApi); //
+            HttpResponseMessage response = await client.GetAsync(UriApi);
 
-            devuelveAlgoPorfa = await response.Content.ReadAsByteArrayAsync(); //
+            if (response.IsSuccessStatusCode)
+            {
+                ret = await response.Content.ReadAsStringAsync();
+                lista = await JsonConvert.DeserializeObject<Task<List<clsPersona>>>(ret);
 
+            }
+            else
+            {
 
-            for (int i = 0; i < devuelveAlgoPorfa.Count(); i++) {
-
-               
+                //TODO
 
             }
 
-            */
+
+
+
+            return lista;
+
+
             /*
             Task<List<object>> rett = null;
             clsUriBase gestoriaApi = new clsUriBase();
@@ -119,7 +129,8 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
 
     */
 
-       
 
+
+        }
     }
 }

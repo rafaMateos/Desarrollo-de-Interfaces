@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace _17_CrudPersonas_UWP_API.ViewModel
 {
-     public class clsViewModel
+     public class clsViewModel : clsVMBase
     {
-        private List<clsPersona> _ListadoDePersonas;
-        public List<clsPersona> ListadoDePersonas
+        private Task<List<clsPersona>> _ListadoDePersonas;
+        public Task<List<clsPersona>> ListadoDePersonas
         {
 
             get
@@ -32,7 +32,9 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
 
             clsListadoPersonasBL gest = new clsListadoPersonasBL();
 
-            gest.pepe();
+            _ListadoDePersonas = gest.getListadoPersonas_BL();
+            
+           
 
         }
     }

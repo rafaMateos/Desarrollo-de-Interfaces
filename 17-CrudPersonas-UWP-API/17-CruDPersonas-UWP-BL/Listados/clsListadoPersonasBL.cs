@@ -1,4 +1,5 @@
 ﻿using _17_CrudPersonas_UWP_DAL.Listados;
+using _17_CrudPersonas_UWP_Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,12 @@ namespace _17_CruDPersonas_UWP_BL.Listados
     public class clsListadoPersonasBL
     {
 
-        public void pepe() {
-
+        public async Task<List<clsPersona>> getListadoPersonas_BL() {
+            
             clsListadoPersonas gestoraDal = new clsListadoPersonas();
-            gestoraDal.getListadoPersonas();
+            List<clsPersona> lista = await gestoraDal.getListadoPersonas();
+
+            return lista;
 
         }
     }

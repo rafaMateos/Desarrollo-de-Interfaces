@@ -13,20 +13,20 @@
         <vm:clsViewModel></vm:clsViewModel>
     </Page.DataContext>
 
-    <ListView Name="lv_listado"
-                  ItemsSource="{Binding ListadoDePersonas}">
-        <ListView.ItemTemplate>
+    <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
+        <ListView.HeaderTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="{Binding Path=nombre}"                                    
-                                   MaxWidth="120"
-                                   MinWidth="120"
-                                   FontSize="18"
-                                   Margin="0,10,0,6"></TextBlock>
-                    <TextBlock Text="{Binding Path=apellidos}"
-                                   FontSize="14"
-                                   Margin="0,0,0,10"></TextBlock>
-                    
+                    <TextBlock FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Text="Personas"></TextBlock>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.HeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Path=nombre}" Margin="0,0,6,0"></TextBlock>
+                    <TextBlock Text="/" Margin="0,0,6,0"></TextBlock>
+                    <TextBlock Text="{Binding Path=apellidos}"></TextBlock>
                 </StackPanel>
             </DataTemplate>
         </ListView.ItemTemplate>
