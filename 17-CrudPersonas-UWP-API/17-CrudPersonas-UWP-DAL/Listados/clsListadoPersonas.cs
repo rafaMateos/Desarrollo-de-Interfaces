@@ -27,30 +27,20 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
             String uri = gestoriaApi.getBaseUrlApi();
             Uri UriApi = new Uri(uri);
             List<clsPersona> lista = null;
-            Byte[] devuelveAlgoPorfa;
-            clsPersona newPer;
-            Formatting bf = new Formatting();
             string ret;
-
             HttpClient client = new HttpClient();
-
             HttpResponseMessage response = await client.GetAsync(UriApi);
 
             if (response.IsSuccessStatusCode)
             {
                 ret = await response.Content.ReadAsStringAsync();
                 lista = await JsonConvert.DeserializeObject<Task<List<clsPersona>>>(ret);
-
             }
             else
             {
-
-                //TODO
-
+                
             }
-
-
-
+        
 
             return lista;
 
