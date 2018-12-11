@@ -11,6 +11,22 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
      public class clsViewModel : clsVMBase
     {
         private List<clsPersona> _ListadoDePersonas;
+        private bool _esRespuesta = false;
+        private String _esVisible;
+
+        public String EsVisible {
+
+            get {
+
+                return _esVisible;
+            }
+            set {
+
+                _esVisible = value;
+            }
+
+        }
+        
         public List<clsPersona> ListadoDePersonas
         {
 
@@ -46,6 +62,22 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
             clsListadoPersonasBL gest = new clsListadoPersonasBL();
             _ListadoDePersonas = await gest.getListadoPersonas_BL();
             NotifyPropertyChanged("ListadoDePersonas");
+            _esRespuesta = true;
+            DESHabilitarGif();
+        }
+
+        public void DESHabilitarGif() {
+
+            if (_esRespuesta) {
+
+                _esVisible = "Collapsed";
+                NotifyPropertyChanged("EsVisible");
+            }
+            else {
+
+                _esVisible = "Visible";
+            }
+
         }
     }
 }

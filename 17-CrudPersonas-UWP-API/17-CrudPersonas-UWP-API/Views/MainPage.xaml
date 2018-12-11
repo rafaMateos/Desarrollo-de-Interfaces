@@ -13,11 +13,13 @@
         <vm:clsViewModel></vm:clsViewModel>
     </Page.DataContext>
 
+    
     <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
         <ListView.HeaderTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Vertical">
                     <TextBlock FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Text="Personas"></TextBlock>
+                    <Image Visibility="{Binding EsVisible, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Source="/Assets/loading.gif"></Image>
                 </StackPanel>
             </DataTemplate>
         </ListView.HeaderTemplate>
@@ -27,7 +29,10 @@
                     <TextBlock Text="{Binding Path=nombre}" Margin="0,0,6,0"></TextBlock>
                     <TextBlock Text="/" Margin="0,0,6,0"></TextBlock>
                     <TextBlock Text="{Binding Path=apellidos}"></TextBlock>
+
                 </StackPanel>
+
+               
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
