@@ -10,8 +10,8 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
 {
      public class clsViewModel : clsVMBase
     {
-        private Task<List<clsPersona>> _ListadoDePersonas;
-        public Task<List<clsPersona>> ListadoDePersonas
+        private List<clsPersona> _ListadoDePersonas;
+        public List<clsPersona> ListadoDePersonas
         {
 
             get
@@ -44,7 +44,7 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
         private async void CargarAsync() {
 
             clsListadoPersonasBL gest = new clsListadoPersonasBL();
-            _ListadoDePersonas = gest.getListadoPersonas_BL();
+            _ListadoDePersonas = await gest.getListadoPersonas_BL();
             NotifyPropertyChanged("ListadoDePersonas");
         }
     }

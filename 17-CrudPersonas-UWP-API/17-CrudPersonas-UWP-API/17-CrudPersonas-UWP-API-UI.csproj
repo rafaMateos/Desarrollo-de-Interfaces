@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="ViewModel\clsViewModel.cs" />
     <Compile Include="ViewModel\clsVMBase.cs" />
+    <Compile Include="ViewModel\NotifyTaskCompletation2.cs" />
     <Compile Include="ViewModel\NotifyTaskCompletion.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

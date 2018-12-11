@@ -34,7 +34,7 @@ namespace _17_CrudPersonas_UWP_DAL.Listados
             if (response.IsSuccessStatusCode)
             {
                 ret = await response.Content.ReadAsStringAsync();
-                lista = await JsonConvert.DeserializeObject<Task<List<clsPersona>>>(ret);
+                lista = JsonConvert.DeserializeObject<List<clsPersona>>(ret);
             }
             else
             {
