@@ -10,24 +10,9 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
 {
      public class clsViewModel : clsVMBase
     {
-        private List<clsPersona> _ListadoDePersonas;
-        private bool _esRespuesta = false;
-        private String _esVisible;
+        private NotifyTaskCompletation2<List<clsPersona>> _ListadoDePersonas;
 
-        public String EsVisible {
-
-            get {
-
-                return _esVisible;
-            }
-            set {
-
-                _esVisible = value;
-            }
-
-        }
-        
-        public List<clsPersona> ListadoDePersonas
+        public NotifyTaskCompletation2<List<clsPersona>> ListadoDePersonas
         {
 
             get
@@ -44,11 +29,15 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
 
         }
 
+        /// <summary>
+        /// Contructor de nuestro ViewModel
+        /// </summary>
         public clsViewModel() {
 
-            CargarAsync();
-            //Tener en cuenta que esta no es la mejor forma.
-            //Prox dia haremos la clase tocha, de nuestro amigo cristiano.
+            //CargarAsync();
+            clsListadoPersonasBL gest = new clsListadoPersonasBL();
+
+            _ListadoDePersonas = new NotifyTaskCompletation2<List<clsPersona>>(gest.getListadoPersonas_BL());
 
         }
 
@@ -57,27 +46,14 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
         /// No es la mejor manera prque no podriamos controlar las exepciones ya que este metodo
         //  sera llamado en el constructor.
         /// </summary>
-        private async void CargarAsync() {
+        //private async void CargarAsync() {
+            
+        //    _ListadoDePersonas = await gest.getListadoPersonas_BL();
+        //    NotifyPropertyChanged("ListadoDePersonas");
+        //    _esRespuesta = true;
+        //    DESHabilitarGif();
+        //}
 
-            clsListadoPersonasBL gest = new clsListadoPersonasBL();
-            _ListadoDePersonas = await gest.getListadoPersonas_BL();
-            NotifyPropertyChanged("ListadoDePersonas");
-            _esRespuesta = true;
-            DESHabilitarGif();
-        }
-
-        public void DESHabilitarGif() {
-
-            if (_esRespuesta) {
-
-                _esVisible = "Collapsed";
-                NotifyPropertyChanged("EsVisible");
-            }
-            else {
-
-                _esVisible = "Visible";
-            }
-
-        }
+       
     }
 }

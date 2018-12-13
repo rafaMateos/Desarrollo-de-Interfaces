@@ -13,7 +13,6 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
     {
 
         #region PropiedadesPublicas
-
         //public event PropertyChangedEventHandler PropertyChanged; Esto no!!! utiliza clsVMBase que es mejo
         public Task<TResult> Task { get; private set; }
         public TResult Result

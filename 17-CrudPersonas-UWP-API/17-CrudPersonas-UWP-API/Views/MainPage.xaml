@@ -5,21 +5,30 @@
     xmlns:local="using:_17_CrudPersonas_UWP_API"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:vm="using:_17_CrudPersonas_UWP_API.ViewModel"
+    xmlns:converter ="using:_17_CrudPersonas_UWP_API.ViewModel.Converter"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!--Converter para la visibilidad de componentes-->
+    <Page.Resources>
+        <converter:clsConverterVisibility x:Key="visibilidad">
+        </converter:clsConverterVisibility>
+    </Page.Resources>
+    
+    <!--Data context de nuestro MainPage-->
     <Page.DataContext>
-        <vm:clsViewModel></vm:clsViewModel>
+        <vm:clsViewModel>
+        </vm:clsViewModel>
     </Page.DataContext>
 
-    
-    <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
+    <!--ListView perfecta flama-->
+    <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas.Result,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
         <ListView.HeaderTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Vertical">
                     <TextBlock FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Text="Personas"></TextBlock>
-                    <Image Visibility="{Binding EsVisible, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="50" Source="/Assets/loading.gif"></Image>
+                    <ProgressRing Visibility="{Binding ListadoDePersonas.IsNotCompleted,Converter={StaticResource visibilidad}}" IsActive="True"  Width="50"></ProgressRing>
                 </StackPanel>
             </DataTemplate>
         </ListView.HeaderTemplate>
@@ -29,13 +38,8 @@
                     <TextBlock Text="{Binding Path=nombre}" Margin="0,0,6,0"></TextBlock>
                     <TextBlock Text="/" Margin="0,0,6,0"></TextBlock>
                     <TextBlock Text="{Binding Path=apellidos}"></TextBlock>
-
                 </StackPanel>
-
-               
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-
-
 </Page>
