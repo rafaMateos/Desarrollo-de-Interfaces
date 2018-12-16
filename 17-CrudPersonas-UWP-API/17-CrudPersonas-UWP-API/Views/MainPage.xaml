@@ -22,8 +22,9 @@
         </vm:clsViewModel>
     </Page.DataContext>
 
+    <RelativePanel>
     <!--ListView perfecta flama-->
-    <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas.Result,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
+        <ListView Visibility="Visible" Margin="15,15,0,-18.6"  Name="lv_listado" ItemsSource="{Binding ListadoDePersonas.Result,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding PersonaSelecionada, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="180">
         <ListView.HeaderTemplate>
             <DataTemplate>
                 <StackPanel Orientation="Vertical">
@@ -42,4 +43,125 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
+        <Grid Name="g_editar" RelativePanel.RightOf="lv_listado">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+
+
+            <StackPanel Margin="15" Grid.Column="0" Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock 
+                       Text="Nombre:"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Margin="0,0,0,0">
+                </TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="1" 
+                     Text="{Binding Path=PersonaSelecionada.nombre, Mode=TwoWay}"
+                      
+                     Margin="15,5,0,5"
+                     PlaceholderText="Nombre"
+                     Width="200"></TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="15" Grid.Column="0" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock 
+                       Text="Apellidos:"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Margin="0,0,0,0">
+                </TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="2" 
+                     Text="{Binding Path=PersonaSelecionada.apellidos, Mode=TwoWay}"
+                     Margin="6,5,0,5"
+                     PlaceholderText="Apellidos"
+                     Width="200"></TextBox>
+            </StackPanel>
+
+
+            <StackPanel Margin="15" Grid.Column="0" Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock 
+                       Text="FechaNac:"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Margin="0,0,0,0">
+                </TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="3" 
+                     Text="{Binding Path=PersonaSelecionada.fechaNacimiento, Mode=TwoWay}"
+                     Margin="2,5,0,5"
+                     PlaceholderText="Fecha Nacimiento"
+                         Width="200">
+
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Margin="15" Grid.Column="0" Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock 
+                       Text="Direccion:"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Margin="0,0,0,0">
+                </TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="4" 
+                     Text="{Binding Path=PersonaSelecionada.direccion, Mode=TwoWay}"
+                     Margin="6,5,0,5"
+                     PlaceholderText="Dirección"
+                         Width="200"></TextBox>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Column="0" Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center" Margin="15">
+                <TextBlock 
+                       Text="Telefono:"
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Margin="0,0,0,0">
+                </TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="5" 
+                     Text="{Binding Path=PersonaSelecionada.telefono, Mode=TwoWay}"
+                     PlaceholderText="Teléfono"
+                     Margin="13,5,0,5"
+                     Width="200"
+                     ></TextBox>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Left" Margin="15" Orientation="Horizontal" Grid.Column="0" Grid.Row="7">
+                <AppBarButton Command="{Binding Path=InsertarPersonaCommand, Mode=TwoWay}" HorizontalAlignment="Left" FontFamily="Segoe MDL2 Assets" Icon="Add" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+
+                <AppBarButton Command="{Binding Path=GuardarCommand}" HorizontalAlignment="Center" FontFamily="Segoe MDL2 Assets" Icon="Save" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+
+                <AppBarButton Command="{Binding Path=eliminarCommand}" HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Delete" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+
+                <AppBarButton Command="{Binding Path=ActualizarListadoCommando}"  HorizontalAlignment="Right" FontFamily="Segoe MDL2 Assets" Icon="Refresh" Margin="8,8,8,8" FontSize="30"></AppBarButton>
+            </StackPanel>
+
+            <StackPanel Grid.Row="8" Orientation="Horizontal">
+
+                <TextBox  Text="{Binding TextoBuscar, Mode=TwoWay , UpdateSourceTrigger=PropertyChanged}" MinWidth="200" Height="40"></TextBox>
+                <AppBarButton  VerticalAlignment="Center"  Icon="Find"></AppBarButton>
+
+            </StackPanel>
+
+            
+
+        </Grid>
+
+
+    </RelativePanel>
+
+
 </Page>

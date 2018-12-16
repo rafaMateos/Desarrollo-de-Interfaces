@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Listados\clsListadoPersonasBL.cs" />
+    <Compile Include="Manejadora\clsManejadoraPersonas_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\_17_CruDPersonas_UWP_BL.rd.xml" />
   </ItemGroup>
@@ -126,9 +127,7 @@
       <Name>17-CrudPersonas-UWP-Entidades</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Manejadora\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

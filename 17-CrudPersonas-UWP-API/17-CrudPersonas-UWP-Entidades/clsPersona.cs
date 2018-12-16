@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace _17_CrudPersonas_UWP_Entidades
 {
-    public class clsPersona 
+    public class clsPersona
     {
         #region atributosYPropiedades
 
