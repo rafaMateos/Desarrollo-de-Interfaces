@@ -29,7 +29,7 @@
             <DataTemplate>
                 <StackPanel Orientation="Vertical">
                     <TextBlock FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" Text="Personas"></TextBlock>
-                    <ProgressRing Visibility="{Binding ListadoDePersonas.IsNotCompleted,Converter={StaticResource visibilidad}}" IsActive="True"  Width="50"></ProgressRing>
+                    <ProgressRing Visibility="{Binding ListadoDePersonas.IsNotCompleted,Converter={StaticResource visibilidad}}" IsActive="True"  MinHeight="500"></ProgressRing>
                 </StackPanel>
             </DataTemplate>
         </ListView.HeaderTemplate>
