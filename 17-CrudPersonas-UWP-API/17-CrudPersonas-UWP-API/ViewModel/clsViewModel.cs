@@ -352,6 +352,8 @@ namespace _17_CrudPersonas_UWP_API.ViewModel
             clsListadoPersonasBL gest = new clsListadoPersonasBL();
 
             _ListadoDePersonas = new NotifyTaskCompletation2<List<clsPersona>>(gest.getListadoPersonas_BL());
+            
+            
             _esEditar = true;
             _esVisible = "Collapsed";
 
