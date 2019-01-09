@@ -49,8 +49,8 @@ namespace ChatFlama
 
         public void SignalR()
         {
-            //conn = new HubConnection("http://chatnervion.azurewebsites.net");
-            conn = new HubConnection("http://chatflama.azurewebsites.net");
+            conn = new HubConnection("http://chatnervion.azurewebsites.net");
+            //conn = new HubConnection("http://chatflama.azurewebsites.net");
             proxy = conn.CreateHubProxy("ChatHub");
             conn.Start();
 
