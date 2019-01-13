@@ -1,0 +1,9 @@
+﻿<Application
+    x:Class="ParejasDeCartas.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ParejasDeCartas"
+    xmlns:converters="using:ParejasDeCartas.Converters"
+    RequestedTheme="Light">
+
+</Application>
