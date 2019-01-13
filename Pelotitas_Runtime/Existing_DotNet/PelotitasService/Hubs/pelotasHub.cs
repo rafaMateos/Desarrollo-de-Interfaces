@@ -12,7 +12,9 @@ namespace PelotitasService.Hubs
         public void enviarPosi(clsPelotitas obj)
         {
             Clients.All.sendPosition(obj);
+            
         }
 
+       
     }
 }

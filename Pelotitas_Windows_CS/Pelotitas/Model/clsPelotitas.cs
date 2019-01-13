@@ -7,11 +7,11 @@ namespace Pelotitas.Model
 {
     public class clsPelotitas
     {
-        public int esComedor;
-        public int id;
-        public int arriba;
-        public int izquierda;
-
+        public int esComedor = 1;
+        public int id = 1;
+        public int arriba { get; set; }
+        public int izquierda { get; set; }
+        
 
     }
 }

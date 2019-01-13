@@ -11,7 +11,7 @@ namespace PelotitasService.Models
         public int id;
         public int arriba;
         public int izquierda;
-
+        public int UserId;
 
     }
 }

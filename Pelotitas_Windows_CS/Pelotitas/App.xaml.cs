@@ -1,11 +1,16 @@
 ﻿using Microsoft.AspNet.SignalR.Client;
 using Microsoft.WindowsAzure.MobileServices;
+using Pelotitas.Model;
+using Pelotitas;
 using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.Generic;
+using Windows.Foundation;
 
 namespace Pelotitas
 {
@@ -13,16 +18,21 @@ namespace Pelotitas
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     /// 
- 
+
+
     sealed partial class App : Application
     {
 
-    public HubConnection conn { get; set; }
-    public IHubProxy proxy { get; set; }
+        private List<Point> m_Points;
+        private Random m_Random;
 
-    // This MobileServiceClient has been configured to communicate with the Azure Mobile Service and
-    // Azure Gateway using the application key. You're all set to start working with your Mobile Service!
-    public static MobileServiceClient MobileService = new MobileServiceClient(
+        public ViewModelMain pos = new ViewModelMain();
+        public HubConnection conn { get; set; }
+        public IHubProxy MyHubProxy { get; set; }
+
+        // This MobileServiceClient has been configured to communicate with the Azure Mobile Service and
+        // Azure Gateway using the application key. You're all set to start working with your Mobile Service!
+        public static MobileServiceClient MobileService = new MobileServiceClient(
             "https://pelotitas.azurewebsites.net"
         );
 
@@ -34,6 +44,9 @@ namespace Pelotitas
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            //Initialize hub connection. 
+            //SignalR();
         }
 
         /// <summary>
@@ -105,5 +118,39 @@ namespace Pelotitas
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        //private void SignalR()
+        //{
+        //    //Connect to the url 
+        //    conn = new HubConnection("https://pelotitas.azurewebsites.net");
+        //    //conn = new HubConnection("http://localhost:58458/");
+        //    //ChatHub is the hub name defined in the host program. 
+        //    MyHubProxy = conn.CreateHubProxy("pelotasHub");
+        //    conn.Start();
+
+        //    MyHubProxy.On<clsPelotitas>("sendPosition", onPosition);
+        //}
+
+        //public void Position(clsPelotitas pos)
+        //{
+        //    if (conn.State == Microsoft.AspNet.SignalR.Client.ConnectionState.Connected)
+        //    {
+
+        //     MyHubProxy.Invoke("enviarPosi", pos);
+        //     }
+
+        //    }
+
+        //    private async void onPosition(clsPelotitas pelotas)
+        //{
+        //    await Windows.ApplicationModel.Core.CoreApplication.MainView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+        //    {
+
+        //        pos.left = pelotas.izquierda;
+        //        pos.top = pelotas.arriba;
+                
+                
+        //    });
+        //}
     }
 }
