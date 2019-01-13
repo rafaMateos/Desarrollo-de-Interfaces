@@ -130,24 +130,46 @@ namespace ParejasDeCartas
 
                         ContentDialog confirmarActualizado = new ContentDialog();
                         confirmarActualizado.Title = "Resultados";
-                        confirmarActualizado.Content = "Ganador " + info.nickNameGanador;
-                        confirmarActualizado.PrimaryButtonText = "Aceptar";
+                        confirmarActualizado.Content = "Ganador " + info.nickNameGanador + "";
+                        confirmarActualizado.PrimaryButtonText = "ReiniciarPartida";
+                        confirmarActualizado.SecondaryButtonText = "Salir";
                         ContentDialogResult resultado = await confirmarActualizado.ShowAsync();
 
-                        Application.Current.Exit();
+                        if (resultado == ContentDialogResult.Primary)
+                        {
+
+                            ReiniciarPartida();
+                        }
+                        else {
+
+                            Application.Current.Exit();
+                        }
+
                     }
 
                 }
 
 
-                
-               
-
-
             });
+
+           
         }
 
-      
+        public void ReiniciarPartida()
+        {
+            aciertos = 0;
+            aciertoO = 0;
+            cartasResp = 0;
+            cartasRespO = 0;
+            
+            
+
+            this.Frame.Navigate(typeof(MainPage));
+
+
+        }
+
+
 
     }
 }
