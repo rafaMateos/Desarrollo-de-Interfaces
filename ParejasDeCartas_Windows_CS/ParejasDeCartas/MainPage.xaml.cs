@@ -40,6 +40,10 @@ namespace ParejasDeCartas
         public static IHubProxy MyHubProxy { get; set; }
         public static String NickName;
 
+        /// <summary>
+        /// Metodo el cual recoge los parametros pasado en el query de navigation
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -56,6 +60,9 @@ namespace ParejasDeCartas
             this.tt = r;
         }
 
+        /// <summary>
+        /// Metodo signalR el cual nos conectara a nuestro servidor(Local o nube).
+        /// </summary>
         private void SignalR()
         {
 
@@ -72,6 +79,10 @@ namespace ParejasDeCartas
            
         }
 
+        /// <summary>
+        /// Metodo el cual enviara la informacion necesaria al servidor.
+        /// </summary>
+        /// <param name="info"></param>
          public static void Position(clsInfoPartida info)
         {
 
@@ -84,7 +95,10 @@ namespace ParejasDeCartas
 
         }
 
-        
+        /// <summary>
+        /// Metodo el cual recibiremos la informacion proporcionada por el servidor.
+        /// </summary>
+        /// <param name="info"></param>
         private async void onInfo(clsInfoPartida info)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
@@ -155,14 +169,15 @@ namespace ParejasDeCartas
            
         }
 
+        /// <summary>
+        /// Metodo para reiniciar una partida.
+        /// </summary>
         public void ReiniciarPartida()
         {
             aciertos = 0;
             aciertoO = 0;
             cartasResp = 0;
             cartasRespO = 0;
-            
-            
 
             this.Frame.Navigate(typeof(MainPage));
 

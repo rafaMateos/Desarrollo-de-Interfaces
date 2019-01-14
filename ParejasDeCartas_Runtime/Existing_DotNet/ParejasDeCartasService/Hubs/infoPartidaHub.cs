@@ -9,17 +9,19 @@ using System.Web;
 namespace ParejasDeCartasService.Hubs
 {
 
+    //Interfaz que hay que mirarse mejor
     public interface IUserIdProvider
     {
         string GetUserId(IRequest request);
     }
 
-    
+    //Hun de mi server
     public class infoPartidaHub : Hub
     {
 
         public static int contadorUser = 0;
 
+        //Metodo para enviar la informacion general de la partida.
         public void enviarInfo(clsInfoPartida info) {
 
             Clients.All.sendInfoPartida(info);
@@ -27,6 +29,7 @@ namespace ParejasDeCartasService.Hubs
 
         }
 
+        //Metodo que se ejecutara cada vez que haya una nueva conex
         public override Task OnConnected()
         {
             contadorUser++;
@@ -34,6 +37,7 @@ namespace ParejasDeCartasService.Hubs
             return base.OnConnected();
         }
 
+        //Metodo que se ejecutara cada vez que se pierda una conex
         public override Task OnDisconnected(bool stopCalled)
         {
             contadorUser--;

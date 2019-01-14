@@ -28,9 +28,14 @@ namespace ParejasDeCartas
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// Metodo onn click del boton empezar a jugar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_ClickAsynAsync(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage), nick.Text.ToString());
+            this.Frame.Navigate(typeof(MainPage), nick.Text.ToString()); //Pasamos el nickname 
         }
     }
 }

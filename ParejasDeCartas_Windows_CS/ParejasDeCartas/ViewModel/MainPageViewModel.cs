@@ -10,15 +10,26 @@ namespace ParejasDeCartas.ViewModel
 {
     public class MainPageViewModel : clsVMBase
     {
-       
+
+        public MainPageViewModel()
+        {
+
+            _Images = CargarImages();
+            _listadoCartas = cargarPregun();
+            _contadorPeguntasMostradas = 1;
+            _contadorPeguntasAcertadas = 0;
+        }
+
+        #region propiedades privada
         private clsInfoPartida info = new clsInfoPartida();
         private List<String> _listadoCartas;
         private List<clsCarta> _Images;
         private clsCarta _cartaSeleccionada;
         private int _contadorPeguntasMostradas;
         public int _contadorPeguntasAcertadas { get; set; }
+        #endregion
 
-
+        #region propiedades publicas
         public int Contador
         {
 
@@ -95,7 +106,9 @@ namespace ParejasDeCartas.ViewModel
                 _Images = value;
                 NotifyPropertyChanged("_Images");            }
         }
+        #endregion
 
+        #region Metodos que se que no van aqui pero como era una prueba los he dejado
         public List<clsCarta> CargarImages() {
 
             List<clsCarta> ret = new List<clsCarta>();
@@ -156,7 +169,6 @@ namespace ParejasDeCartas.ViewModel
 
 
         }
-
 
         public List<String> cargarPregun() {
 
@@ -233,15 +245,6 @@ namespace ParejasDeCartas.ViewModel
             }
 
         }
-        public MainPageViewModel() {
-
-            _Images = CargarImages();
-            _listadoCartas = cargarPregun();
-            _contadorPeguntasMostradas = 1;
-            _contadorPeguntasAcertadas = 0;
-        }
-
-       
 
         public void ContadorAcert() {
 
@@ -267,5 +270,9 @@ namespace ParejasDeCartas.ViewModel
 
             }
         }
+
+        #endregion
+
+
     }
 }
