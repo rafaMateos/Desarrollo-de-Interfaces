@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,9 +28,9 @@ namespace ParejasDeCartas
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_ClickAsynAsync(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage),nick.Text.ToString());
+            this.Frame.Navigate(typeof(MainPage), nick.Text.ToString());
         }
     }
 }

@@ -85,11 +85,11 @@ namespace ParejasDeCartas
         }
 
         
-
         private async void onInfo(clsInfoPartida info)
         {
             await Windows.ApplicationModel.Core.CoreApplication.MainView.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
             {
+
                
                 if (info._cartasRespondidas == 4 && info.NickName.Equals(NickName)) {
 

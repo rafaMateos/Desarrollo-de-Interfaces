@@ -22,7 +22,7 @@
             <TextBox Name="nick" FontSize="35" Width="500" ></TextBox>
         </StackPanel>
 
-        <Button  Click="Button_Click" Width="500" Margin="50" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="Login" Content="Empezar a jugar"></Button>
+        <Button  Click="Button_ClickAsynAsync" Width="500" Margin="50" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.Below="Login" Content="Empezar a jugar"></Button>
         
     </RelativePanel>
 </Page>
